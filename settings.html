@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html" aria-current="page"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li aria-current="page">Settings</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">System</div>
+          <h1>Settings</h1>
+          <p class="fo-page-sub">Workspace preferences. Appearance changes apply instantly and are remembered on this device.</p>
+        </div>
+        <div class="fo-page-actions"></div>
+      </div>
+      <div class="fo-settings">
+        <nav class="fo-subnav" aria-label="Settings sections">
+          <a class="fo-nav-link" href="#s-profile" aria-current="page"><i data-lucide="user"></i><span>Profile</span></a>
+          <a class="fo-nav-link" href="#s-appearance"><i data-lucide="palette"></i><span>Appearance</span></a>
+          <a class="fo-nav-link" href="#s-notify"><i data-lucide="bell"></i><span>Notifications</span></a>
+          <a class="fo-nav-link" href="#s-security"><i data-lucide="shield"></i><span>Security</span></a>
+          <a class="fo-nav-link" href="#s-billing"><i data-lucide="credit-card"></i><span>Billing</span></a>
+          <a class="fo-nav-link" href="#s-danger"><i data-lucide="triangle-alert"></i><span>Danger zone</span></a>
+        </nav>
+        <div>
+          <form class="fo-settings-section" id="s-profile" data-fo-validate data-success="Profile updated.">
+            <div><h3>Profile</h3><p>How you appear to colleagues and clients.</p></div>
+            <div class="fo-form">
+              <div class="fo-row" style="gap:var(--space-4)"><span class="fo-avatar fo-avatar-lg">E</span><button type="button" class="fo-btn fo-btn-sm"><i data-lucide="upload"></i>Upload photo</button><button type="button" class="fo-btn fo-btn-sm fo-btn-ghost">Remove</button></div>
+              <div class="fo-form-row"><div class="fo-field"><label class="fo-label" for="s-fn">Full name</label><input class="fo-input" id="s-fn" value="Eleanor Vance" required><p class="fo-error"></p></div><div class="fo-field"><label class="fo-label" for="s-em">Email</label><input class="fo-input" id="s-em" type="email" value="eleanor@atelier.co" required><p class="fo-error"></p></div></div>
+              <div class="fo-form-row"><div class="fo-field"><label class="fo-label" for="s-tz">Time zone</label><select class="fo-select" id="s-tz"><option>Europe/Copenhagen (CET)</option><option>Europe/London (GMT)</option><option>America/New_York (ET)</option></select></div><div class="fo-field"><label class="fo-label" for="s-lang">Language</label><select class="fo-select" id="s-lang"><option>English (UK)</option><option>English (US)</option><option>Dansk</option></select></div></div>
+              <div><button class="fo-btn fo-btn-primary" type="submit">Save profile</button></div>
+            </div>
+          </form>
+          <section class="fo-settings-section" id="s-appearance">
+            <div><h3>Appearance</h3><p>Theme and navigation layout. Also available from the top bar.</p></div>
+            <div class="fo-form">
+              <div class="fo-field"><span class="fo-label">Theme</span><div><div class="fo-seg"><label><input type="radio" name="theme" value="light" data-fo-set-theme><i data-lucide="sun"></i>Light</label><label><input type="radio" name="theme" value="dark" data-fo-set-theme><i data-lucide="moon"></i>Dark</label></div></div></div>
+              <div class="fo-field"><span class="fo-label">Navigation</span><div><div class="fo-seg"><label><input type="radio" name="layout" value="side" data-fo-set-layout><i data-lucide="panel-left"></i>Sidebar</label><label><input type="radio" name="layout" value="top" data-fo-set-layout><i data-lucide="panel-top"></i>Top bar</label></div></div></div>
+              <label class="fo-switch"><input type="checkbox">Reduce motion</label>
+            </div>
+          </section>
+          <section class="fo-settings-section" id="s-notify">
+            <div><h3>Notifications</h3><p>Choose what reaches your inbox.</p></div>
+            <div class="fo-table-wrap"><table class="fo-table fo-table-compact"><thead><tr><th>Event</th><th class="fo-shrink">Email</th><th class="fo-shrink">In app</th></tr></thead><tbody>
+              <tr><td>Invoice paid or overdue</td><td><label class="fo-switch"><input type="checkbox" checked aria-label="Email"></label></td><td><label class="fo-switch"><input type="checkbox" checked aria-label="In app"></label></td></tr>
+              <tr><td>New comment or mention</td><td><label class="fo-switch"><input type="checkbox" aria-label="Email"></label></td><td><label class="fo-switch"><input type="checkbox" checked aria-label="In app"></label></td></tr>
+              <tr><td>Weekly summary</td><td><label class="fo-switch"><input type="checkbox" checked aria-label="Email"></label></td><td><label class="fo-switch"><input type="checkbox" aria-label="In app"></label></td></tr>
+              <tr><td>Product updates</td><td><label class="fo-switch"><input type="checkbox" aria-label="Email"></label></td><td><label class="fo-switch"><input type="checkbox" aria-label="In app"></label></td></tr>
+            </tbody></table></div>
+          </section>
+          <form class="fo-settings-section" id="s-security" data-fo-validate data-success="Password changed.">
+            <div><h3>Security</h3><p>Password and two-step verification.</p></div>
+            <div class="fo-form">
+              <div class="fo-field"><label class="fo-label" for="s-cur">Current password</label><input class="fo-input" type="password" id="s-cur" required><p class="fo-error"></p></div>
+              <div class="fo-form-row"><div class="fo-field"><label class="fo-label" for="s-new">New password</label><input class="fo-input" type="password" id="s-new" required minlength="8"><p class="fo-error"></p></div><div class="fo-field"><label class="fo-label" for="s-new2">Confirm</label><input class="fo-input" type="password" id="s-new2" required data-match="#s-new"><p class="fo-error"></p></div></div>
+              <div class="fo-alert fo-alert-info"><i data-lucide="shield-check"></i><div class="fo-alert-body"><p class="fo-alert-title">Two-step verification is on</p><p>Codes are sent to the authenticator app on your phone.</p></div><button type="button" class="fo-btn fo-btn-sm">Manage</button></div>
+              <div><button class="fo-btn fo-btn-primary" type="submit">Update password</button></div>
+            </div>
+          </form>
+          <section class="fo-settings-section" id="s-billing">
+            <div><h3>Billing</h3><p>Plan, payment method and receipts.</p></div>
+            <div class="fo-stack">
+              <div class="fo-card fo-card-accent"><div class="fo-card-body fo-between"><div><div class="fo-card-kicker">Current plan</div><div class="fo-card-title">Team — 24 seats</div><p class="fo-small fo-muted fo-mb-0">$480 per month, renews 1 November 2026</p></div><div class="fo-row"><button class="fo-btn">Change plan</button><a class="fo-btn fo-btn-primary" href="invoice.html">Latest invoice</a></div></div></div>
+              <div class="fo-card"><div class="fo-card-body fo-row"><i data-lucide="credit-card"></i><span style="flex:1">Visa ending <span class="fo-num">4021</span> · expires 08/28</span><button class="fo-btn fo-btn-sm fo-btn-ghost">Replace</button></div></div>
+            </div>
+          </section>
+          <section class="fo-settings-section" id="s-danger" style="border-bottom:0">
+            <div><h3 class="fo-danger">Danger zone</h3><p>Irreversible actions. Admins only.</p></div>
+            <div class="fo-card" style="border-color:color-mix(in srgb,var(--color-danger) 45%,transparent)"><div class="fo-card-body fo-between"><div><div class="fo-card-title">Delete workspace</div><p class="fo-small fo-muted fo-mb-0">Removes every project, file and member.</p></div><button class="fo-btn fo-btn-danger" data-fo-open="#confirm-delete">Delete workspace</button></div></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+<div class="fo-overlay" id="confirm-delete" aria-hidden="true" role="alertdialog" aria-labelledby="del-title">
+  <div class="fo-modal" style="width:min(420px,100%)">
+    <div class="fo-modal-header"><h2 class="fo-modal-title" id="del-title">Delete this record?</h2><button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"><i data-lucide="x"></i></button></div>
+    <div class="fo-modal-body"><p class="fo-muted" style="margin:0">This removes the record and its history. It can't be undone.</p></div>
+    <div class="fo-modal-footer"><button class="fo-btn fo-btn-ghost" data-fo-close>Keep it</button><button class="fo-btn fo-btn-danger" data-fo-close data-fo-toast="Record deleted" data-fo-toast-type="danger">Delete</button></div>
+  </div>
+</div>
+</body>
+</html>

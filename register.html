@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create account · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-auth">
+  <aside class="fo-auth-aside">
+    <a class="fo-brand" href="index.html" style="padding:0;border:0;height:auto"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <figure style="margin:0">
+      <blockquote class="fo-auth-quote">“The work is in the margins — keep them generous.”</blockquote>
+      <figcaption class="fo-small fo-muted" style="margin-top:var(--space-4)">— House note, Atelier</figcaption>
+    </figure>
+    <div class="fo-between fo-xs fo-faint"><span>© 2026 Atelier</span><button class="fo-btn fo-btn-sm fo-btn-ghost" data-fo-toggle="theme"><i data-lucide="moon"></i>Theme</button></div>
+  </aside>
+  <main class="fo-auth-main">
+    <div class="fo-auth-card">
+      <div class="fo-page-kicker">Fourteen days, no card</div>
+      <h1>Create an account</h1>
+      <p class="fo-muted">Already have one? <a href="login.html">Sign in</a></p>
+      <form class="fo-form" style="margin-top:var(--space-6)" data-fo-validate data-success="Check your inbox to confirm your email." data-success-title="Account created">
+        <div class="fo-form-row"><div class="fo-field"><label class="fo-label" for="r-f">First name</label><input class="fo-input" id="r-f" required><p class="fo-error"></p></div><div class="fo-field"><label class="fo-label" for="r-l">Last name</label><input class="fo-input" id="r-l" required><p class="fo-error"></p></div></div>
+        <div class="fo-field"><label class="fo-label" for="r-e">Work email</label><input class="fo-input" id="r-e" type="email" required><p class="fo-error"></p></div>
+        <div class="fo-field"><label class="fo-label" for="r-p">Password</label><input class="fo-input" id="r-p" type="password" required minlength="8"><p class="fo-help">At least 8 characters.</p><p class="fo-error"></p></div>
+        <label class="fo-check"><input type="checkbox" required><span>I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a></span></label>
+        <button class="fo-btn fo-btn-primary fo-btn-lg fo-btn-block" type="submit">Create account</button>
+      </form>
+    </div>
+  </main>
+</div>
+</body>
+</html>

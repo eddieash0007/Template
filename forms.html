@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forms · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html" aria-current="page"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li><a href="#">Build</a></li><li aria-current="page">Forms</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">Build</div>
+          <h1>Forms & validation</h1>
+          <p class="fo-page-sub">Every control, on native elements. Submit the form empty to see validation; it runs from <code>data-fo-validate</code> with no page script.</p>
+        </div>
+        <div class="fo-page-actions"></div>
+      </div>
+      <ol class="fo-steps" style="margin-bottom:var(--space-6)"><li class="is-done">Account</li><li class="is-current">Details</li><li>Billing</li><li>Review</li></ol>
+      <form class="fo-stack-lg" data-fo-validate data-success="Project created. You can change any of this later." data-success-title="All set" novalidate>
+        <section class="fo-card">
+          <div class="fo-card-header"><div><div class="fo-card-kicker">01</div><h2 class="fo-card-title">Text inputs</h2></div></div>
+          <div class="fo-card-body fo-form">
+            <div class="fo-form-row">
+              <div class="fo-field"><label class="fo-label" for="f-name">Project name <span class="fo-req">*</span></label><input class="fo-input" id="f-name" required placeholder="Winter catalogue"><p class="fo-help">Shown to everyone in the workspace.</p><p class="fo-error"></p></div>
+              <div class="fo-field"><label class="fo-label" for="f-email">Owner email <span class="fo-req">*</span></label><input class="fo-input" id="f-email" type="email" required placeholder="name@company.com"><p class="fo-error"></p></div>
+            </div>
+            <div class="fo-form-row">
+              <div class="fo-field"><label class="fo-label" for="f-url">Website</label><div class="fo-input-group"><span class="fo-input-addon">https://</span><input class="fo-input" id="f-url" placeholder="atelier.co"></div></div>
+              <div class="fo-field"><label class="fo-label" for="f-budget">Budget</label><div class="fo-input-group"><span class="fo-input-addon">$</span><input class="fo-input" id="f-budget" inputmode="decimal" pattern="[0-9,.]+" data-msg-pattern="Numbers only." placeholder="12,000"><span class="fo-input-addon">USD</span></div><p class="fo-error"></p></div>
+            </div>
+            <div class="fo-form-row">
+              <div class="fo-field"><label class="fo-label" for="f-pw">Password <span class="fo-req">*</span></label><input class="fo-input" id="f-pw" type="password" required minlength="8"><p class="fo-help">At least 8 characters.</p><p class="fo-error"></p></div>
+              <div class="fo-field"><label class="fo-label" for="f-pw2">Confirm password <span class="fo-req">*</span></label><input class="fo-input" id="f-pw2" type="password" required data-match="#f-pw"><p class="fo-error"></p></div>
+            </div>
+            <div class="fo-field"><label class="fo-label" for="f-desc">Description <span class="fo-faint fo-num" id="f-desc-count">0/280</span></label><textarea class="fo-textarea" id="f-desc" maxlength="280" data-fo-count="#f-desc-count" placeholder="What is this project for?"></textarea></div>
+            <div class="fo-form-row">
+              <div class="fo-field"><label class="fo-label" for="f-ro">Workspace ID</label><input class="fo-input" id="f-ro" value="ws_4f81c2a" readonly></div>
+              <div class="fo-field"><label class="fo-label" for="f-dis">Region</label><input class="fo-input" id="f-dis" value="eu-north-1" disabled></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="fo-card">
+          <div class="fo-card-header"><div><div class="fo-card-kicker">02</div><h2 class="fo-card-title">Choices</h2></div></div>
+          <div class="fo-card-body fo-form">
+            <div class="fo-form-row">
+              <div class="fo-field"><label class="fo-label" for="f-cat">Category <span class="fo-req">*</span></label><select class="fo-select" id="f-cat" required><option value="">Choose one…</option><option>Editorial</option><option>Product</option><option>Research</option></select><p class="fo-error"></p></div>
+              <div class="fo-field"><label class="fo-label" for="f-team">Team</label><select class="fo-select" id="f-team"><option>Design</option><option>Engineering</option><option>Operations</option></select></div>
+            </div>
+            <div class="fo-form-row">
+              <div class="fo-field"><span class="fo-label">Visibility</span><div class="fo-choice-group">
+                <label class="fo-radio"><input type="radio" name="vis" checked><span>Private<small>Only invited members.</small></span></label>
+                <label class="fo-radio"><input type="radio" name="vis"><span>Workspace<small>Everyone at Atelier.</small></span></label>
+                <label class="fo-radio"><input type="radio" name="vis"><span>Public link<small>Anyone with the URL.</small></span></label>
+              </div></div>
+              <div class="fo-field"><span class="fo-label">Include</span><div class="fo-choice-group">
+                <label class="fo-check"><input type="checkbox" checked>Task board</label>
+                <label class="fo-check"><input type="checkbox" checked>Shared calendar</label>
+                <label class="fo-check"><input type="checkbox" data-indeterminate>Files (some folders)</label>
+                <label class="fo-check"><input type="checkbox" disabled>Billing (admins only)</label>
+              </div></div>
+            </div>
+            <div class="fo-form-row">
+              <div class="fo-field"><span class="fo-label">Notifications</span><div class="fo-choice-group">
+                <label class="fo-switch"><input type="checkbox" checked>Email digest</label>
+                <label class="fo-switch"><input type="checkbox">Mentions only</label>
+              </div></div>
+              <div class="fo-field"><span class="fo-label">Cadence</span><div><div class="fo-seg"><label><input type="radio" name="cad">Daily</label><label><input type="radio" name="cad" checked>Weekly</label><label><input type="radio" name="cad">Monthly</label></div></div></div>
+            </div>
+            <div class="fo-field"><label class="fo-label" for="f-range">Priority weight <span class="fo-num" id="f-range-out">60%</span></label><input class="fo-range" type="range" id="f-range" min="0" max="100" value="60" data-fo-output="#f-range-out" data-unit="%"></div>
+            <div class="fo-field"><span class="fo-label">Tags</span><div class="fo-row"><span class="fo-tag">print<button type="button" class="fo-tag-remove" data-fo-dismiss aria-label="Remove"><i data-lucide="x"></i></button></span><span class="fo-tag">autumn<button type="button" class="fo-tag-remove" data-fo-dismiss aria-label="Remove"><i data-lucide="x"></i></button></span><span class="fo-tag">catalogue<button type="button" class="fo-tag-remove" data-fo-dismiss aria-label="Remove"><i data-lucide="x"></i></button></span></div></div>
+          </div>
+        </section>
+
+        <section class="fo-card">
+          <div class="fo-card-header"><div><div class="fo-card-kicker">03</div><h2 class="fo-card-title">Dates & files</h2></div></div>
+          <div class="fo-card-body fo-form">
+            <div class="fo-form-row">
+              <div class="fo-field"><label class="fo-label" for="f-start">Start date <span class="fo-req">*</span></label><input class="fo-input" type="date" id="f-start" required><p class="fo-error"></p></div>
+              <div class="fo-field"><label class="fo-label" for="f-time">Kick-off time</label><input class="fo-input" type="time" id="f-time" value="09:30"></div>
+              <div class="fo-field"><label class="fo-label" for="f-month">Billing month</label><input class="fo-input" type="month" id="f-month" value="2026-10"></div>
+            </div>
+            <div class="fo-field"><span class="fo-label">Attachments</span>
+              <label class="fo-dropzone" data-list="#f-files"><i data-lucide="upload"></i><strong>Drop files here or browse</strong><span class="fo-small fo-muted">PDF, PNG or JPG, up to 20 MB each</span><input type="file" multiple></label>
+              <ul class="fo-file-list" id="f-files"></ul>
+            </div>
+            <label class="fo-check"><input type="checkbox" required id="f-terms"><span>I agree to the workspace terms <span class="fo-req">*</span></span></label>
+          </div>
+          <div class="fo-card-footer"><span class="fo-small fo-muted">Fields marked <span class="fo-danger">*</span> are required.</span><div class="fo-row"><button type="reset" class="fo-btn fo-btn-ghost">Reset</button><button type="submit" class="fo-btn fo-btn-primary"><i data-lucide="check"></i>Create project</button></div></div>
+        </section>
+      </form>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+
+</body>
+</html>

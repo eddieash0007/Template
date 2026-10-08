@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Components · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html" aria-current="page"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li><a href="#">Build</a></li><li aria-current="page">Components</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">Build · Reference</div>
+          <h1>Components</h1>
+          <p class="fo-page-sub">Every component, live, with the exact markup beneath it. Copy, paste, change the words. Behaviour is wired by <code>data-fo-*</code> attributes — no page scripts.</p>
+        </div>
+        <div class="fo-page-actions"><button class="fo-btn" data-fo-toggle="theme"><i data-lucide="moon"></i>Try dark</button></div>
+      </div>
+      <div class="fo-settings">
+        <nav class="fo-subnav" aria-label="Components">
+          <a class="fo-nav-link" href="#buttons"><span>Buttons</span></a>
+          <a class="fo-nav-link" href="#button-sizes"><span>Sizes, icons & groups</span></a>
+          <a class="fo-nav-link" href="#tags"><span>Tags, badges & status</span></a>
+          <a class="fo-nav-link" href="#cards"><span>Cards</span></a>
+          <a class="fo-nav-link" href="#stats"><span>Stat tiles</span></a>
+          <a class="fo-nav-link" href="#table"><span>Tables</span></a>
+          <a class="fo-nav-link" href="#inputs"><span>Text inputs</span></a>
+          <a class="fo-nav-link" href="#choices"><span>Checkboxes, radios, switches</span></a>
+          <a class="fo-nav-link" href="#dates"><span>Date, range & file</span></a>
+          <a class="fo-nav-link" href="#modal"><span>Modal & drawer</span></a>
+          <a class="fo-nav-link" href="#alerts"><span>Alerts & toasts</span></a>
+          <a class="fo-nav-link" href="#tabs"><span>Tabs</span></a>
+          <a class="fo-nav-link" href="#accordion"><span>Accordion, breadcrumb, steps</span></a>
+          <a class="fo-nav-link" href="#dropdown"><span>Dropdowns, menus & popovers</span></a>
+          <a class="fo-nav-link" href="#tooltip"><span>Tooltips</span></a>
+          <a class="fo-nav-link" href="#pagination"><span>Pagination</span></a>
+          <a class="fo-nav-link" href="#progress"><span>Progress, spinners, skeletons</span></a>
+          <a class="fo-nav-link" href="#avatars"><span>Avatars & users</span></a>
+          <a class="fo-nav-link" href="#timeline"><span>Timeline</span></a>
+          <a class="fo-nav-link" href="#charts"><span>Charts</span></a>
+          <a class="fo-nav-link" href="#empty"><span>Empty states</span></a>
+          <a class="fo-nav-link" href="#lists"><span>Lists & key-value</span></a>
+        </nav>
+        <div>
+        <section class="fo-ref-section" id="buttons">
+          <h2>Buttons <code>.fo-btn</code></h2>
+          <p>Outlined, never filled. Primary carries the accent stroke; use one per view.</p>
+          <div class="fo-demo">
+<button class="fo-btn fo-btn-primary">Primary</button>
+<button class="fo-btn">Secondary</button>
+<button class="fo-btn fo-btn-ghost">Ghost</button>
+<button class="fo-btn fo-btn-link">Link</button>
+<button class="fo-btn fo-btn-danger">Delete</button>
+<button class="fo-btn" disabled>Disabled</button>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;button class="fo-btn fo-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="fo-btn"&gt;Secondary&lt;/button&gt;
+&lt;button class="fo-btn fo-btn-ghost"&gt;Ghost&lt;/button&gt;
+&lt;button class="fo-btn fo-btn-link"&gt;Link&lt;/button&gt;
+&lt;button class="fo-btn fo-btn-danger"&gt;Delete&lt;/button&gt;
+&lt;button class="fo-btn" disabled&gt;Disabled&lt;/button&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="button-sizes">
+          <h2>Sizes, icons & groups <code>.fo-btn-sm · -lg · -icon · .fo-btn-group</code></h2>
+          <p>Icons are Lucide: <code>&lt;i data-lucide="name"&gt;</code>. Icon-only buttons need an aria-label.</p>
+          <div class="fo-demo">
+<button class="fo-btn fo-btn-primary fo-btn-sm"><i data-lucide="plus"></i>Small</button>
+<button class="fo-btn fo-btn-primary"><i data-lucide="plus"></i>Default</button>
+<button class="fo-btn fo-btn-primary fo-btn-lg"><i data-lucide="plus"></i>Large</button>
+<button class="fo-btn fo-btn-icon" aria-label="Edit"><i data-lucide="pencil"></i></button>
+<button class="fo-btn fo-btn-icon fo-btn-ghost" aria-label="More"><i data-lucide="ellipsis"></i></button>
+<button class="fo-btn" disabled><span class="fo-spinner"></span>Saving</button>
+<div class="fo-btn-group">
+  <button class="fo-btn fo-btn-sm" aria-pressed="true">Day</button>
+  <button class="fo-btn fo-btn-sm">Week</button>
+  <button class="fo-btn fo-btn-sm">Month</button>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;button class="fo-btn fo-btn-primary fo-btn-sm"&gt;&lt;i data-lucide="plus"&gt;&lt;/i&gt;Small&lt;/button&gt;
+&lt;button class="fo-btn fo-btn-primary"&gt;&lt;i data-lucide="plus"&gt;&lt;/i&gt;Default&lt;/button&gt;
+&lt;button class="fo-btn fo-btn-primary fo-btn-lg"&gt;&lt;i data-lucide="plus"&gt;&lt;/i&gt;Large&lt;/button&gt;
+&lt;button class="fo-btn fo-btn-icon" aria-label="Edit"&gt;&lt;i data-lucide="pencil"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="fo-btn fo-btn-icon fo-btn-ghost" aria-label="More"&gt;&lt;i data-lucide="ellipsis"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="fo-btn" disabled&gt;&lt;span class="fo-spinner"&gt;&lt;/span&gt;Saving&lt;/button&gt;
+&lt;div class="fo-btn-group"&gt;
+  &lt;button class="fo-btn fo-btn-sm" aria-pressed="true"&gt;Day&lt;/button&gt;
+  &lt;button class="fo-btn fo-btn-sm"&gt;Week&lt;/button&gt;
+  &lt;button class="fo-btn fo-btn-sm"&gt;Month&lt;/button&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="tags">
+          <h2>Tags, badges & status <code>.fo-tag · .fo-badge · .fo-status</code></h2>
+          <p>Tags label things; badges count things; status dots report state.</p>
+          <div class="fo-demo">
+<span class="fo-tag">Default</span>
+<span class="fo-tag fo-tag-accent">Accent</span>
+<span class="fo-tag fo-tag-outline">Outline</span>
+<span class="fo-tag fo-tag-success">Paid</span>
+<span class="fo-tag fo-tag-danger">Overdue</span>
+<span class="fo-tag fo-tag-info">Draft</span>
+<span class="fo-badge">12</span>
+<span class="fo-badge fo-badge-muted">3</span>
+<span class="fo-status fo-status-success">Active</span>
+<span class="fo-status fo-status-warning">Pending</span>
+<span class="fo-status fo-status-danger">Failed</span>
+<span class="fo-status">Unknown</span>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;span class="fo-tag"&gt;Default&lt;/span&gt;
+&lt;span class="fo-tag fo-tag-accent"&gt;Accent&lt;/span&gt;
+&lt;span class="fo-tag fo-tag-outline"&gt;Outline&lt;/span&gt;
+&lt;span class="fo-tag fo-tag-success"&gt;Paid&lt;/span&gt;
+&lt;span class="fo-tag fo-tag-danger"&gt;Overdue&lt;/span&gt;
+&lt;span class="fo-tag fo-tag-info"&gt;Draft&lt;/span&gt;
+&lt;span class="fo-badge"&gt;12&lt;/span&gt;
+&lt;span class="fo-badge fo-badge-muted"&gt;3&lt;/span&gt;
+&lt;span class="fo-status fo-status-success"&gt;Active&lt;/span&gt;
+&lt;span class="fo-status fo-status-warning"&gt;Pending&lt;/span&gt;
+&lt;span class="fo-status fo-status-danger"&gt;Failed&lt;/span&gt;
+&lt;span class="fo-status"&gt;Unknown&lt;/span&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="cards">
+          <h2>Cards <code>.fo-card + header / body / footer</code></h2>
+          <p>Bordered and unfilled. <code>.fo-card-accent</code> adds a gold top rule; <code>.fo-card-raised</code> lifts it slightly.</p>
+          <div class="fo-demo">
+<section class="fo-card" style="width:340px">
+  <div class="fo-card-header">
+    <div>
+      <div class="fo-card-kicker">Kicker</div>
+      <h2 class="fo-card-title">Card title</h2>
+    </div>
+    <button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" aria-label="More"><i data-lucide="ellipsis"></i></button>
+  </div>
+  <div class="fo-card-body"><p class="fo-mb-0 fo-small">Body content goes here.</p></div>
+  <div class="fo-card-footer"><span class="fo-muted">Updated 2h ago</span><a href="#">Open</a></div>
+</section>
+<section class="fo-card fo-card-accent fo-card-raised" style="width:240px">
+  <div class="fo-card-body"><div class="fo-card-kicker">Accent · raised</div><div class="fo-card-title">Current plan</div></div>
+</section>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;section class="fo-card" style="width:340px"&gt;
+  &lt;div class="fo-card-header"&gt;
+    &lt;div&gt;
+      &lt;div class="fo-card-kicker"&gt;Kicker&lt;/div&gt;
+      &lt;h2 class="fo-card-title"&gt;Card title&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" aria-label="More"&gt;&lt;i data-lucide="ellipsis"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="fo-card-body"&gt;&lt;p class="fo-mb-0 fo-small"&gt;Body content goes here.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="fo-card-footer"&gt;&lt;span class="fo-muted"&gt;Updated 2h ago&lt;/span&gt;&lt;a href="#"&gt;Open&lt;/a&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="fo-card fo-card-accent fo-card-raised" style="width:240px"&gt;
+  &lt;div class="fo-card-body"&gt;&lt;div class="fo-card-kicker"&gt;Accent · raised&lt;/div&gt;&lt;div class="fo-card-title"&gt;Current plan&lt;/div&gt;&lt;/div&gt;
+&lt;/section&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="stats">
+          <h2>Stat tiles <code>.fo-stats &gt; .fo-stat</code></h2>
+          <p>A strip of figures sharing hairlines. Add a <code>data-type="spark"</code> chart for a trend.</p>
+          <div class="fo-demo fo-demo-block">
+<section class="fo-stats" style="width:100%">
+  <div class="fo-stat">
+    <div class="fo-stat-label">Revenue</div>
+    <div class="fo-stat-value">$84.2<small>k</small></div>
+    <div class="fo-stat-foot"><span class="fo-delta fo-delta-up"><i data-lucide="arrow-up-right"></i>6.2%</span>vs. last month</div>
+    <div class="fo-chart fo-spark" data-type="spark" data-series="[4,6,5,8,7,9,11]"></div>
+  </div>
+  <div class="fo-stat">
+    <div class="fo-stat-label">Churn</div>
+    <div class="fo-stat-value">1.8<small>%</small></div>
+    <div class="fo-stat-foot"><span class="fo-delta fo-delta-down"><i data-lucide="arrow-up-right"></i>0.2 pt</span>vs. last month</div>
+  </div>
+</section>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;section class="fo-stats" style="width:100%"&gt;
+  &lt;div class="fo-stat"&gt;
+    &lt;div class="fo-stat-label"&gt;Revenue&lt;/div&gt;
+    &lt;div class="fo-stat-value"&gt;$84.2&lt;small&gt;k&lt;/small&gt;&lt;/div&gt;
+    &lt;div class="fo-stat-foot"&gt;&lt;span class="fo-delta fo-delta-up"&gt;&lt;i data-lucide="arrow-up-right"&gt;&lt;/i&gt;6.2%&lt;/span&gt;vs. last month&lt;/div&gt;
+    &lt;div class="fo-chart fo-spark" data-type="spark" data-series="[4,6,5,8,7,9,11]"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fo-stat"&gt;
+    &lt;div class="fo-stat-label"&gt;Churn&lt;/div&gt;
+    &lt;div class="fo-stat-value"&gt;1.8&lt;small&gt;%&lt;/small&gt;&lt;/div&gt;
+    &lt;div class="fo-stat-foot"&gt;&lt;span class="fo-delta fo-delta-down"&gt;&lt;i data-lucide="arrow-up-right"&gt;&lt;/i&gt;0.2 pt&lt;/span&gt;vs. last month&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="table">
+          <h2>Tables <code>.fo-table + data-fo-table</code></h2>
+          <p>Static by default. Add <code>data-fo-table</code> plus <code>data-sort</code> on headers for sorting; <code>data-search</code>, <code>data-filter</code>, <code>data-pagination</code>, <code>data-info</code>, <code>data-bulkbar</code> point at controls by selector. See tables.html for the full set.</p>
+          <div class="fo-demo fo-demo-block">
+<div class="fo-card" style="width:100%"><div class="fo-table-wrap">
+  <table class="fo-table" data-fo-table>
+    <thead><tr><th data-sort="text">Client</th><th class="fo-right" data-sort="num">Amount</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Halden Studio</td><td class="fo-right">$4,200.00</td><td><span class="fo-status fo-status-success">Paid</span></td></tr>
+      <tr><td>Maren &amp; Pike</td><td class="fo-right">$12,860.00</td><td><span class="fo-status fo-status-warning">Pending</span></td></tr>
+      <tr><td>Ostrava Group</td><td class="fo-right">$7,415.50</td><td><span class="fo-status fo-status-danger">Overdue</span></td></tr>
+    </tbody>
+  </table>
+</div></div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-card" style="width:100%"&gt;&lt;div class="fo-table-wrap"&gt;
+  &lt;table class="fo-table" data-fo-table&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th data-sort="text"&gt;Client&lt;/th&gt;&lt;th class="fo-right" data-sort="num"&gt;Amount&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Halden Studio&lt;/td&gt;&lt;td class="fo-right"&gt;$4,200.00&lt;/td&gt;&lt;td&gt;&lt;span class="fo-status fo-status-success"&gt;Paid&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Maren &amp;amp; Pike&lt;/td&gt;&lt;td class="fo-right"&gt;$12,860.00&lt;/td&gt;&lt;td&gt;&lt;span class="fo-status fo-status-warning"&gt;Pending&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Ostrava Group&lt;/td&gt;&lt;td class="fo-right"&gt;$7,415.50&lt;/td&gt;&lt;td&gt;&lt;span class="fo-status fo-status-danger"&gt;Overdue&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="inputs">
+          <h2>Text inputs <code>.fo-field &gt; .fo-label + .fo-input</code></h2>
+          <p>Wrap every control in <code>.fo-field</code>. Add <code>&lt;p class="fo-error"&gt;</code> for validation messages — <code>data-fo-validate</code> on the form fills it in.</p>
+          <div class="fo-demo fo-demo-block">
+<div class="fo-form" style="width:100%;max-width:520px">
+  <div class="fo-field">
+    <label class="fo-label" for="x-name">Name <span class="fo-req">*</span></label>
+    <input class="fo-input" id="x-name" placeholder="Winter catalogue" required>
+    <p class="fo-help">Shown to the whole workspace.</p>
+    <p class="fo-error"></p>
+  </div>
+  <label class="fo-input-icon"><i data-lucide="search"></i><input class="fo-input" type="search" placeholder="Search…"></label>
+  <div class="fo-input-group"><span class="fo-input-addon">$</span><input class="fo-input" placeholder="0.00"><span class="fo-input-addon">USD</span></div>
+  <div class="fo-field is-invalid">
+    <label class="fo-label" for="x-err">Email</label>
+    <input class="fo-input" id="x-err" value="eleanor@" aria-invalid="true">
+    <p class="fo-error">Enter a valid email address.</p>
+  </div>
+  <select class="fo-select"><option>Select</option><option>Option</option></select>
+  <textarea class="fo-textarea" placeholder="Textarea"></textarea>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-form" style="width:100%;max-width:520px"&gt;
+  &lt;div class="fo-field"&gt;
+    &lt;label class="fo-label" for="x-name"&gt;Name &lt;span class="fo-req"&gt;*&lt;/span&gt;&lt;/label&gt;
+    &lt;input class="fo-input" id="x-name" placeholder="Winter catalogue" required&gt;
+    &lt;p class="fo-help"&gt;Shown to the whole workspace.&lt;/p&gt;
+    &lt;p class="fo-error"&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;label class="fo-input-icon"&gt;&lt;i data-lucide="search"&gt;&lt;/i&gt;&lt;input class="fo-input" type="search" placeholder="Search…"&gt;&lt;/label&gt;
+  &lt;div class="fo-input-group"&gt;&lt;span class="fo-input-addon"&gt;$&lt;/span&gt;&lt;input class="fo-input" placeholder="0.00"&gt;&lt;span class="fo-input-addon"&gt;USD&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fo-field is-invalid"&gt;
+    &lt;label class="fo-label" for="x-err"&gt;Email&lt;/label&gt;
+    &lt;input class="fo-input" id="x-err" value="eleanor@" aria-invalid="true"&gt;
+    &lt;p class="fo-error"&gt;Enter a valid email address.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;select class="fo-select"&gt;&lt;option&gt;Select&lt;/option&gt;&lt;option&gt;Option&lt;/option&gt;&lt;/select&gt;
+  &lt;textarea class="fo-textarea" placeholder="Textarea"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="choices">
+          <h2>Checkboxes, radios, switches <code>.fo-check · .fo-radio · .fo-switch · .fo-seg</code></h2>
+          <p>Native inputs, restyled. <code>data-indeterminate</code> sets the mixed state on load.</p>
+          <div class="fo-demo">
+<div class="fo-choice-group">
+  <label class="fo-check"><input type="checkbox" checked>Checked</label>
+  <label class="fo-check"><input type="checkbox" data-indeterminate>Indeterminate</label>
+  <label class="fo-check"><input type="checkbox">Unchecked</label>
+</div>
+<div class="fo-choice-group">
+  <label class="fo-radio"><input type="radio" name="x-r" checked>Monthly</label>
+  <label class="fo-radio"><input type="radio" name="x-r">Annual<small>Save two months</small></label>
+</div>
+<div class="fo-choice-group">
+  <label class="fo-switch"><input type="checkbox" checked>Email digest</label>
+  <label class="fo-switch"><input type="checkbox">Mentions</label>
+</div>
+<div class="fo-seg">
+  <label><input type="radio" name="x-s">Daily</label>
+  <label><input type="radio" name="x-s" checked>Weekly</label>
+  <label><input type="radio" name="x-s">Monthly</label>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-choice-group"&gt;
+  &lt;label class="fo-check"&gt;&lt;input type="checkbox" checked&gt;Checked&lt;/label&gt;
+  &lt;label class="fo-check"&gt;&lt;input type="checkbox" data-indeterminate&gt;Indeterminate&lt;/label&gt;
+  &lt;label class="fo-check"&gt;&lt;input type="checkbox"&gt;Unchecked&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="fo-choice-group"&gt;
+  &lt;label class="fo-radio"&gt;&lt;input type="radio" name="x-r" checked&gt;Monthly&lt;/label&gt;
+  &lt;label class="fo-radio"&gt;&lt;input type="radio" name="x-r"&gt;Annual&lt;small&gt;Save two months&lt;/small&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="fo-choice-group"&gt;
+  &lt;label class="fo-switch"&gt;&lt;input type="checkbox" checked&gt;Email digest&lt;/label&gt;
+  &lt;label class="fo-switch"&gt;&lt;input type="checkbox"&gt;Mentions&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="fo-seg"&gt;
+  &lt;label&gt;&lt;input type="radio" name="x-s"&gt;Daily&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="x-s" checked&gt;Weekly&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="x-s"&gt;Monthly&lt;/label&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="dates">
+          <h2>Date, range & file <code>input[type=date] · .fo-range · .fo-dropzone</code></h2>
+          <p>Native date/time pickers keep the theme. The dropzone lists chosen files into its <code>data-list</code> target.</p>
+          <div class="fo-demo fo-demo-block">
+<div class="fo-form" style="width:100%;max-width:520px">
+  <div class="fo-form-row">
+    <input class="fo-input" type="date" aria-label="Date">
+    <input class="fo-input" type="time" value="09:30" aria-label="Time">
+  </div>
+  <input class="fo-range" type="range" min="0" max="100" value="40" aria-label="Weight">
+  <label class="fo-dropzone" data-list="#x-files">
+    <i data-lucide="upload"></i><strong>Drop files or browse</strong>
+    <span class="fo-small fo-muted">Up to 20 MB</span>
+    <input type="file" multiple>
+  </label>
+  <ul class="fo-file-list" id="x-files"></ul>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-form" style="width:100%;max-width:520px"&gt;
+  &lt;div class="fo-form-row"&gt;
+    &lt;input class="fo-input" type="date" aria-label="Date"&gt;
+    &lt;input class="fo-input" type="time" value="09:30" aria-label="Time"&gt;
+  &lt;/div&gt;
+  &lt;input class="fo-range" type="range" min="0" max="100" value="40" aria-label="Weight"&gt;
+  &lt;label class="fo-dropzone" data-list="#x-files"&gt;
+    &lt;i data-lucide="upload"&gt;&lt;/i&gt;&lt;strong&gt;Drop files or browse&lt;/strong&gt;
+    &lt;span class="fo-small fo-muted"&gt;Up to 20 MB&lt;/span&gt;
+    &lt;input type="file" multiple&gt;
+  &lt;/label&gt;
+  &lt;ul class="fo-file-list" id="x-files"&gt;&lt;/ul&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="modal">
+          <h2>Modal & drawer <code>.fo-overlay &gt; .fo-modal | .fo-drawer</code></h2>
+          <p>Open with <code>data-fo-open="#id"</code>, close with <code>data-fo-close</code>, Esc or a backdrop click. Or call <code>Folio.openModal("#id")</code>.</p>
+          <div class="fo-demo">
+<button class="fo-btn fo-btn-primary" data-fo-open="#x-modal">Open modal</button>
+<button class="fo-btn" data-fo-open="#x-drawer">Open drawer</button>
+
+<div class="fo-overlay" id="x-modal" aria-hidden="true" role="dialog" aria-labelledby="x-modal-t">
+  <div class="fo-modal">
+    <div class="fo-modal-header">
+      <h2 class="fo-modal-title" id="x-modal-t">Archive project?</h2>
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"><i data-lucide="x"></i></button>
+    </div>
+    <div class="fo-modal-body"><p class="fo-muted fo-mb-0">It leaves the board but keeps its history.</p></div>
+    <div class="fo-modal-footer">
+      <button class="fo-btn fo-btn-ghost" data-fo-close>Cancel</button>
+      <button class="fo-btn fo-btn-primary" data-fo-close data-fo-toast="Project archived">Archive</button>
+    </div>
+  </div>
+</div>
+
+<div class="fo-overlay fo-overlay-drawer" id="x-drawer" aria-hidden="true" role="dialog" aria-labelledby="x-drawer-t">
+  <div class="fo-drawer">
+    <div class="fo-modal-header">
+      <h2 class="fo-modal-title" id="x-drawer-t">Details</h2>
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"><i data-lucide="x"></i></button>
+    </div>
+    <div class="fo-modal-body"><p class="fo-muted">Drawer content.</p></div>
+    <div class="fo-modal-footer"><button class="fo-btn fo-btn-primary" data-fo-close>Done</button></div>
+  </div>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;button class="fo-btn fo-btn-primary" data-fo-open="#x-modal"&gt;Open modal&lt;/button&gt;
+&lt;button class="fo-btn" data-fo-open="#x-drawer"&gt;Open drawer&lt;/button&gt;
+
+&lt;div class="fo-overlay" id="x-modal" aria-hidden="true" role="dialog" aria-labelledby="x-modal-t"&gt;
+  &lt;div class="fo-modal"&gt;
+    &lt;div class="fo-modal-header"&gt;
+      &lt;h2 class="fo-modal-title" id="x-modal-t"&gt;Archive project?&lt;/h2&gt;
+      &lt;button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"&gt;&lt;i data-lucide="x"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="fo-modal-body"&gt;&lt;p class="fo-muted fo-mb-0"&gt;It leaves the board but keeps its history.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="fo-modal-footer"&gt;
+      &lt;button class="fo-btn fo-btn-ghost" data-fo-close&gt;Cancel&lt;/button&gt;
+      &lt;button class="fo-btn fo-btn-primary" data-fo-close data-fo-toast="Project archived"&gt;Archive&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fo-overlay fo-overlay-drawer" id="x-drawer" aria-hidden="true" role="dialog" aria-labelledby="x-drawer-t"&gt;
+  &lt;div class="fo-drawer"&gt;
+    &lt;div class="fo-modal-header"&gt;
+      &lt;h2 class="fo-modal-title" id="x-drawer-t"&gt;Details&lt;/h2&gt;
+      &lt;button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"&gt;&lt;i data-lucide="x"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="fo-modal-body"&gt;&lt;p class="fo-muted"&gt;Drawer content.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="fo-modal-footer"&gt;&lt;button class="fo-btn fo-btn-primary" data-fo-close&gt;Done&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="alerts">
+          <h2>Alerts & toasts <code>.fo-alert · Folio.toast()</code></h2>
+          <p>Alerts sit in the page; toasts float and expire. Trigger a toast declaratively with <code>data-fo-toast</code> or from JS.</p>
+          <div class="fo-demo">
+<div class="fo-alert fo-alert-warning" style="width:100%">
+  <i data-lucide="triangle-alert"></i>
+  <div class="fo-alert-body"><p class="fo-alert-title">Seats almost full</p><p>23 of 24 seats are in use.</p></div>
+  <button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dismiss aria-label="Dismiss"><i data-lucide="x"></i></button>
+</div>
+<button class="fo-btn" data-fo-toast="Saved." data-fo-toast-type="success" data-fo-toast-title="Done">Success toast</button>
+<button class="fo-btn" data-fo-toast="Something failed." data-fo-toast-type="danger">Danger toast</button>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-alert fo-alert-warning" style="width:100%"&gt;
+  &lt;i data-lucide="triangle-alert"&gt;&lt;/i&gt;
+  &lt;div class="fo-alert-body"&gt;&lt;p class="fo-alert-title"&gt;Seats almost full&lt;/p&gt;&lt;p&gt;23 of 24 seats are in use.&lt;/p&gt;&lt;/div&gt;
+  &lt;button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dismiss aria-label="Dismiss"&gt;&lt;i data-lucide="x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;button class="fo-btn" data-fo-toast="Saved." data-fo-toast-type="success" data-fo-toast-title="Done"&gt;Success toast&lt;/button&gt;
+&lt;button class="fo-btn" data-fo-toast="Something failed." data-fo-toast-type="danger"&gt;Danger toast&lt;/button&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="tabs">
+          <h2>Tabs <code>[data-fo-tabs] &gt; .fo-tab[aria-controls]</code></h2>
+          <p>Each tab names its panel via <code>aria-controls</code>. Arrow keys move between tabs. Add <code>.fo-tabs-pill</code> for the compact variant.</p>
+          <div class="fo-demo fo-demo-block">
+<div style="width:100%">
+  <div class="fo-tabs" data-fo-tabs role="tablist">
+    <button class="fo-tab" role="tab" aria-selected="true" aria-controls="x-t1">Overview</button>
+    <button class="fo-tab" role="tab" aria-controls="x-t2">Activity <span class="fo-badge fo-badge-muted">3</span></button>
+    <button class="fo-tab" role="tab" aria-controls="x-t3">Settings</button>
+  </div>
+  <div class="fo-tab-panel" id="x-t1" role="tabpanel">Overview panel.</div>
+  <div class="fo-tab-panel" id="x-t2" role="tabpanel" hidden>Activity panel.</div>
+  <div class="fo-tab-panel" id="x-t3" role="tabpanel" hidden>Settings panel.</div>
+</div>
+<div class="fo-tabs fo-tabs-pill" data-fo-tabs role="tablist">
+  <button class="fo-tab" role="tab" aria-selected="true">12 mo</button>
+  <button class="fo-tab" role="tab">Quarter</button>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div style="width:100%"&gt;
+  &lt;div class="fo-tabs" data-fo-tabs role="tablist"&gt;
+    &lt;button class="fo-tab" role="tab" aria-selected="true" aria-controls="x-t1"&gt;Overview&lt;/button&gt;
+    &lt;button class="fo-tab" role="tab" aria-controls="x-t2"&gt;Activity &lt;span class="fo-badge fo-badge-muted"&gt;3&lt;/span&gt;&lt;/button&gt;
+    &lt;button class="fo-tab" role="tab" aria-controls="x-t3"&gt;Settings&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="fo-tab-panel" id="x-t1" role="tabpanel"&gt;Overview panel.&lt;/div&gt;
+  &lt;div class="fo-tab-panel" id="x-t2" role="tabpanel" hidden&gt;Activity panel.&lt;/div&gt;
+  &lt;div class="fo-tab-panel" id="x-t3" role="tabpanel" hidden&gt;Settings panel.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fo-tabs fo-tabs-pill" data-fo-tabs role="tablist"&gt;
+  &lt;button class="fo-tab" role="tab" aria-selected="true"&gt;12 mo&lt;/button&gt;
+  &lt;button class="fo-tab" role="tab"&gt;Quarter&lt;/button&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="accordion">
+          <h2>Accordion, breadcrumb, steps <code>.fo-accordion · .fo-breadcrumb · .fo-steps</code></h2>
+          <p>The accordion is native <code>&lt;details&gt;</code> — no JS.</p>
+          <div class="fo-demo fo-demo-block">
+<div class="fo-accordion" style="width:100%">
+  <details open><summary>What counts as a seat?</summary><div class="fo-accordion-body">Anyone who can sign in. Guests are free.</div></details>
+  <details><summary>Can I change plans mid-cycle?</summary><div class="fo-accordion-body">Yes — the difference is prorated.</div></details>
+</div>
+<ol class="fo-breadcrumb"><li><a href="#">Atelier</a></li><li><a href="#">Customers</a></li><li aria-current="page">Mara Okafor</li></ol>
+<ol class="fo-steps" style="width:100%"><li class="is-done">Account</li><li class="is-current">Details</li><li>Billing</li></ol>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-accordion" style="width:100%"&gt;
+  &lt;details open&gt;&lt;summary&gt;What counts as a seat?&lt;/summary&gt;&lt;div class="fo-accordion-body"&gt;Anyone who can sign in. Guests are free.&lt;/div&gt;&lt;/details&gt;
+  &lt;details&gt;&lt;summary&gt;Can I change plans mid-cycle?&lt;/summary&gt;&lt;div class="fo-accordion-body"&gt;Yes — the difference is prorated.&lt;/div&gt;&lt;/details&gt;
+&lt;/div&gt;
+&lt;ol class="fo-breadcrumb"&gt;&lt;li&gt;&lt;a href="#"&gt;Atelier&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Customers&lt;/a&gt;&lt;/li&gt;&lt;li aria-current="page"&gt;Mara Okafor&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class="fo-steps" style="width:100%"&gt;&lt;li class="is-done"&gt;Account&lt;/li&gt;&lt;li class="is-current"&gt;Details&lt;/li&gt;&lt;li&gt;Billing&lt;/li&gt;&lt;/ol&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="dropdown">
+          <h2>Dropdowns, menus & popovers <code>.fo-dropdown &gt; [data-fo-dropdown] + .fo-menu</code></h2>
+          <p>Any button with <code>data-fo-dropdown</code> toggles its sibling <code>.fo-menu</code> or <code>.fo-popover</code>. Add <code>.fo-menu-left</code> to align left, <code>.fo-menu-up</code> to open upward.</p>
+          <div class="fo-demo">
+<div class="fo-dropdown">
+  <button class="fo-btn" data-fo-dropdown aria-expanded="false">Actions<i data-lucide="chevron-down"></i></button>
+  <div class="fo-menu fo-menu-left">
+    <div class="fo-menu-label">Record</div>
+    <button class="fo-menu-item"><i data-lucide="pencil"></i>Edit<kbd>E</kbd></button>
+    <button class="fo-menu-item"><i data-lucide="copy"></i>Duplicate</button>
+    <div class="fo-menu-divider"></div>
+    <button class="fo-menu-item fo-menu-item-danger"><i data-lucide="trash-2"></i>Delete</button>
+  </div>
+</div>
+<div class="fo-dropdown">
+  <button class="fo-btn" data-fo-dropdown aria-expanded="false"><i data-lucide="info"></i>Popover</button>
+  <div class="fo-popover fo-menu-left">
+    <p class="fo-popover-title">Net revenue retention</p>
+    <p class="fo-small fo-muted fo-mb-0">Revenue kept from existing accounts after upgrades, downgrades and churn.</p>
+  </div>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-dropdown"&gt;
+  &lt;button class="fo-btn" data-fo-dropdown aria-expanded="false"&gt;Actions&lt;i data-lucide="chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div class="fo-menu fo-menu-left"&gt;
+    &lt;div class="fo-menu-label"&gt;Record&lt;/div&gt;
+    &lt;button class="fo-menu-item"&gt;&lt;i data-lucide="pencil"&gt;&lt;/i&gt;Edit&lt;kbd&gt;E&lt;/kbd&gt;&lt;/button&gt;
+    &lt;button class="fo-menu-item"&gt;&lt;i data-lucide="copy"&gt;&lt;/i&gt;Duplicate&lt;/button&gt;
+    &lt;div class="fo-menu-divider"&gt;&lt;/div&gt;
+    &lt;button class="fo-menu-item fo-menu-item-danger"&gt;&lt;i data-lucide="trash-2"&gt;&lt;/i&gt;Delete&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fo-dropdown"&gt;
+  &lt;button class="fo-btn" data-fo-dropdown aria-expanded="false"&gt;&lt;i data-lucide="info"&gt;&lt;/i&gt;Popover&lt;/button&gt;
+  &lt;div class="fo-popover fo-menu-left"&gt;
+    &lt;p class="fo-popover-title"&gt;Net revenue retention&lt;/p&gt;
+    &lt;p class="fo-small fo-muted fo-mb-0"&gt;Revenue kept from existing accounts after upgrades, downgrades and churn.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="tooltip">
+          <h2>Tooltips <code>[data-fo-tooltip]</code></h2>
+          <p>Pure CSS. Position with <code>data-fo-tooltip-pos="bottom|right"</code>.</p>
+          <div class="fo-demo">
+<button class="fo-btn fo-btn-icon" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button>
+<button class="fo-btn" data-fo-tooltip="Below" data-fo-tooltip-pos="bottom">Hover — bottom</button>
+<button class="fo-btn" data-fo-tooltip="To the right" data-fo-tooltip-pos="right">Hover — right</button>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;button class="fo-btn fo-btn-icon" data-fo-tooltip="Archive" aria-label="Archive"&gt;&lt;i data-lucide="archive"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="fo-btn" data-fo-tooltip="Below" data-fo-tooltip-pos="bottom"&gt;Hover — bottom&lt;/button&gt;
+&lt;button class="fo-btn" data-fo-tooltip="To the right" data-fo-tooltip-pos="right"&gt;Hover — right&lt;/button&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="pagination">
+          <h2>Pagination <code>.fo-pagination &gt; .fo-page-btn</code></h2>
+          <p>Generated automatically by <code>data-fo-table</code>; write it by hand for server-side paging.</p>
+          <div class="fo-demo">
+<ul class="fo-pagination">
+  <li><button class="fo-page-btn" disabled aria-label="Previous"><i data-lucide="chevron-left"></i></button></li>
+  <li><button class="fo-page-btn" aria-current="page">1</button></li>
+  <li><button class="fo-page-btn">2</button></li>
+  <li><button class="fo-page-btn">3</button></li>
+  <li class="fo-faint">…</li>
+  <li><button class="fo-page-btn">12</button></li>
+  <li><button class="fo-page-btn" aria-label="Next"><i data-lucide="chevron-right"></i></button></li>
+</ul>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;ul class="fo-pagination"&gt;
+  &lt;li&gt;&lt;button class="fo-page-btn" disabled aria-label="Previous"&gt;&lt;i data-lucide="chevron-left"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class="fo-page-btn" aria-current="page"&gt;1&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class="fo-page-btn"&gt;2&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class="fo-page-btn"&gt;3&lt;/button&gt;&lt;/li&gt;
+  &lt;li class="fo-faint"&gt;…&lt;/li&gt;
+  &lt;li&gt;&lt;button class="fo-page-btn"&gt;12&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class="fo-page-btn" aria-label="Next"&gt;&lt;i data-lucide="chevron-right"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="progress">
+          <h2>Progress, spinners, skeletons <code>.fo-progress · .fo-ring · .fo-spinner · .fo-skeleton</code></h2>
+          <p>Set width inline on the inner span; set <code>--p</code> on rings.</p>
+          <div class="fo-demo fo-demo-block">
+<div class="fo-stack" style="width:100%;max-width:420px">
+  <div><div class="fo-progress-label"><span>Upload</span><span>64%</span></div><div class="fo-progress"><span style="width:64%"></span></div></div>
+  <div class="fo-progress fo-progress-lg"><span style="width:38%"></span></div>
+  <div class="fo-progress fo-progress-indeterminate"><span></span></div>
+  <div class="fo-row"><span class="fo-ring" style="--p:72">72</span><span class="fo-spinner"></span><span class="fo-spinner fo-spinner-lg"></span></div>
+  <div><span class="fo-skeleton fo-skeleton-title"></span><span class="fo-skeleton fo-skeleton-text"></span><span class="fo-skeleton fo-skeleton-text" style="width:60%"></span></div>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-stack" style="width:100%;max-width:420px"&gt;
+  &lt;div&gt;&lt;div class="fo-progress-label"&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;span&gt;64%&lt;/span&gt;&lt;/div&gt;&lt;div class="fo-progress"&gt;&lt;span style="width:64%"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="fo-progress fo-progress-lg"&gt;&lt;span style="width:38%"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fo-progress fo-progress-indeterminate"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fo-row"&gt;&lt;span class="fo-ring" style="--p:72"&gt;72&lt;/span&gt;&lt;span class="fo-spinner"&gt;&lt;/span&gt;&lt;span class="fo-spinner fo-spinner-lg"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;span class="fo-skeleton fo-skeleton-title"&gt;&lt;/span&gt;&lt;span class="fo-skeleton fo-skeleton-text"&gt;&lt;/span&gt;&lt;span class="fo-skeleton fo-skeleton-text" style="width:60%"&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="avatars">
+          <h2>Avatars & users <code>.fo-avatar · .fo-avatars · .fo-user</code></h2>
+          <p>Initials set in italic Cormorant. Put an <code>&lt;img&gt;</code> inside for photos. <code>.fo-presence</code> adds an online dot.</p>
+          <div class="fo-demo">
+<span class="fo-avatar fo-avatar-sm">E</span>
+<span class="fo-avatar">M</span>
+<span class="fo-avatar fo-avatar-lg fo-presence">J</span>
+<div class="fo-avatars"><span class="fo-avatar">A</span><span class="fo-avatar">B</span><span class="fo-avatar">C</span><span class="fo-avatar fo-avatar-n">+4</span></div>
+<div class="fo-user"><span class="fo-avatar">E</span><div><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">Account owner</div></div></div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;span class="fo-avatar fo-avatar-sm"&gt;E&lt;/span&gt;
+&lt;span class="fo-avatar"&gt;M&lt;/span&gt;
+&lt;span class="fo-avatar fo-avatar-lg fo-presence"&gt;J&lt;/span&gt;
+&lt;div class="fo-avatars"&gt;&lt;span class="fo-avatar"&gt;A&lt;/span&gt;&lt;span class="fo-avatar"&gt;B&lt;/span&gt;&lt;span class="fo-avatar"&gt;C&lt;/span&gt;&lt;span class="fo-avatar fo-avatar-n"&gt;+4&lt;/span&gt;&lt;/div&gt;
+&lt;div class="fo-user"&gt;&lt;span class="fo-avatar"&gt;E&lt;/span&gt;&lt;div&gt;&lt;div class="fo-user-name"&gt;Eleanor Vance&lt;/div&gt;&lt;div class="fo-user-meta"&gt;Account owner&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="timeline">
+          <h2>Timeline <code>.fo-timeline</code></h2>
+          <p>Activity feeds and history. <code>.is-accent</code> marks the notable dot.</p>
+          <div class="fo-demo fo-demo-block">
+<ol class="fo-timeline" style="width:100%;max-width:480px">
+  <li><span class="fo-timeline-dot is-accent"><i data-lucide="check"></i></span><div class="fo-timeline-body"><b style="font-weight:500">Mara</b> approved invoice #1047<div class="fo-timeline-time">09:42</div></div></li>
+  <li><span class="fo-timeline-dot"><i data-lucide="message-square"></i></span><div class="fo-timeline-body"><b style="font-weight:500">Jonas</b> commented<p class="fo-timeline-quote">Hold until November.</p><div class="fo-timeline-time">08:15</div></div></li>
+  <li><span class="fo-timeline-dot"><i data-lucide="upload"></i></span><div class="fo-timeline-body">Export finished<div class="fo-timeline-time">03:00</div></div></li>
+</ol>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;ol class="fo-timeline" style="width:100%;max-width:480px"&gt;
+  &lt;li&gt;&lt;span class="fo-timeline-dot is-accent"&gt;&lt;i data-lucide="check"&gt;&lt;/i&gt;&lt;/span&gt;&lt;div class="fo-timeline-body"&gt;&lt;b style="font-weight:500"&gt;Mara&lt;/b&gt; approved invoice #1047&lt;div class="fo-timeline-time"&gt;09:42&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class="fo-timeline-dot"&gt;&lt;i data-lucide="message-square"&gt;&lt;/i&gt;&lt;/span&gt;&lt;div class="fo-timeline-body"&gt;&lt;b style="font-weight:500"&gt;Jonas&lt;/b&gt; commented&lt;p class="fo-timeline-quote"&gt;Hold until November.&lt;/p&gt;&lt;div class="fo-timeline-time"&gt;08:15&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class="fo-timeline-dot"&gt;&lt;i data-lucide="upload"&gt;&lt;/i&gt;&lt;/span&gt;&lt;div class="fo-timeline-body"&gt;Export finished&lt;div class="fo-timeline-time"&gt;03:00&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="charts">
+          <h2>Charts <code>.fo-chart[data-type]</code></h2>
+          <p>SVG, no library. Types: <code>line</code>, <code>area</code>, <code>bar</code>, <code>donut</code>, <code>spark</code>. Give the element a height; data comes from JSON attributes. Re-renders on resize and theme change; call <code>Folio.renderCharts()</code> after inserting new ones.</p>
+          <div class="fo-demo fo-demo-block">
+<div class="fo-grid" style="width:100%">
+  <div class="fo-col-6">
+    <div class="fo-legend" style="margin-bottom:8px"><span><i></i>This year</span><span><i class="fo-l1"></i>Last year</span></div>
+    <div class="fo-chart" style="height:200px" data-type="area" data-prefix="$"
+      data-names='["This year","Last year"]'
+      data-labels='["Jan","Feb","Mar","Apr","May","Jun"]'
+      data-series='[[12,15,14,19,22,26],[10,11,13,13,15,17]]'></div>
+  </div>
+  <div class="fo-col-3">
+    <div class="fo-chart" style="height:200px" data-type="bar"
+      data-labels='["A","B","C","D"]' data-series='[[8,12,6,10]]'></div>
+  </div>
+  <div class="fo-col-3">
+    <div class="fo-chart" style="height:200px" data-type="donut"
+      data-series='[48,33,14,5]' data-center="1,284" data-center-label="Accounts"></div>
+  </div>
+</div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-grid" style="width:100%"&gt;
+  &lt;div class="fo-col-6"&gt;
+    &lt;div class="fo-legend" style="margin-bottom:8px"&gt;&lt;span&gt;&lt;i&gt;&lt;/i&gt;This year&lt;/span&gt;&lt;span&gt;&lt;i class="fo-l1"&gt;&lt;/i&gt;Last year&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="fo-chart" style="height:200px" data-type="area" data-prefix="$"
+      data-names='["This year","Last year"]'
+      data-labels='["Jan","Feb","Mar","Apr","May","Jun"]'
+      data-series='[[12,15,14,19,22,26],[10,11,13,13,15,17]]'&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fo-col-3"&gt;
+    &lt;div class="fo-chart" style="height:200px" data-type="bar"
+      data-labels='["A","B","C","D"]' data-series='[[8,12,6,10]]'&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fo-col-3"&gt;
+    &lt;div class="fo-chart" style="height:200px" data-type="donut"
+      data-series='[48,33,14,5]' data-center="1,284" data-center-label="Accounts"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="empty">
+          <h2>Empty states <code>.fo-empty</code></h2>
+          <p>Every list needs one. One mark, one line, one action.</p>
+          <div class="fo-demo fo-demo-block">
+<div class="fo-card" style="width:100%"><div class="fo-empty">
+  <span class="fo-empty-mark"><i data-lucide="folder-open"></i></span>
+  <h3>No projects yet</h3>
+  <p>Projects hold tasks, files and the people working on them.</p>
+  <button class="fo-btn fo-btn-primary"><i data-lucide="plus"></i>Create a project</button>
+</div></div>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-card" style="width:100%"&gt;&lt;div class="fo-empty"&gt;
+  &lt;span class="fo-empty-mark"&gt;&lt;i data-lucide="folder-open"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;h3&gt;No projects yet&lt;/h3&gt;
+  &lt;p&gt;Projects hold tasks, files and the people working on them.&lt;/p&gt;
+  &lt;button class="fo-btn fo-btn-primary"&gt;&lt;i data-lucide="plus"&gt;&lt;/i&gt;Create a project&lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;</pre>
+        </section>
+        <section class="fo-ref-section" id="lists">
+          <h2>Lists & key-value <code>.fo-list · .fo-dl</code></h2>
+          <p>For settings summaries, detail panes and small feeds.</p>
+          <div class="fo-demo">
+<div class="fo-card" style="width:320px"><ul class="fo-list fo-small">
+  <li><i data-lucide="file-text"></i><span style="flex:1">Agreement.pdf</span><span class="fo-faint">412 KB</span></li>
+  <li><i data-lucide="file-spreadsheet"></i><span style="flex:1">Seats.csv</span><span class="fo-faint">18 KB</span></li>
+</ul></div>
+<dl class="fo-dl" style="width:320px">
+  <dt>Plan</dt><dd>Team</dd>
+  <dt>Seats</dt><dd>24</dd>
+  <dt>Renews</dt><dd>1 Nov 2026</dd>
+</dl>
+          </div>
+          <pre class="fo-code"><button class="fo-btn fo-btn-sm fo-code-copy" data-fo-copy>Copy</button>&lt;div class="fo-card" style="width:320px"&gt;&lt;ul class="fo-list fo-small"&gt;
+  &lt;li&gt;&lt;i data-lucide="file-text"&gt;&lt;/i&gt;&lt;span style="flex:1"&gt;Agreement.pdf&lt;/span&gt;&lt;span class="fo-faint"&gt;412 KB&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;i data-lucide="file-spreadsheet"&gt;&lt;/i&gt;&lt;span style="flex:1"&gt;Seats.csv&lt;/span&gt;&lt;span class="fo-faint"&gt;18 KB&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+&lt;dl class="fo-dl" style="width:320px"&gt;
+  &lt;dt&gt;Plan&lt;/dt&gt;&lt;dd&gt;Team&lt;/dd&gt;
+  &lt;dt&gt;Seats&lt;/dt&gt;&lt;dd&gt;24&lt;/dd&gt;
+  &lt;dt&gt;Renews&lt;/dt&gt;&lt;dd&gt;1 Nov 2026&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+        </section>
+        </div>
+      </div>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-auth">
+  <aside class="fo-auth-aside">
+    <a class="fo-brand" href="index.html" style="padding:0;border:0;height:auto"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <figure style="margin:0">
+      <blockquote class="fo-auth-quote">“The work is in the margins — keep them generous.”</blockquote>
+      <figcaption class="fo-small fo-muted" style="margin-top:var(--space-4)">— House note, Atelier</figcaption>
+    </figure>
+    <div class="fo-between fo-xs fo-faint"><span>© 2026 Atelier</span><button class="fo-btn fo-btn-sm fo-btn-ghost" data-fo-toggle="theme"><i data-lucide="moon"></i>Theme</button></div>
+  </aside>
+  <main class="fo-auth-main">
+    <div class="fo-auth-card">
+      <div class="fo-page-kicker">Welcome back</div>
+      <h1>Sign in</h1>
+      <p class="fo-muted">New here? <a href="register.html">Create an account</a></p>
+      <form class="fo-form" style="margin-top:var(--space-6)" data-fo-validate data-success="Redirecting to your dashboard…" data-success-title="Signed in" data-redirect="index.html">
+        <div class="fo-field"><label class="fo-label" for="l-e">Email</label><input class="fo-input" id="l-e" type="email" required autocomplete="email" placeholder="name@company.com"><p class="fo-error"></p></div>
+        <div class="fo-field"><label class="fo-label" for="l-p"><span>Password</span><a href="forgot.html" class="fo-xs">Forgot?</a></label><input class="fo-input" id="l-p" type="password" required autocomplete="current-password"><p class="fo-error"></p></div>
+        <label class="fo-check"><input type="checkbox" checked>Keep me signed in for 30 days</label>
+        <button class="fo-btn fo-btn-primary fo-btn-lg fo-btn-block" type="submit">Sign in</button>
+        <div class="fo-divider-text">or</div>
+        <button class="fo-btn fo-btn-block" type="button"><i data-lucide="key-round"></i>Continue with single sign-on</button>
+      </form>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html" aria-current="page"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li aria-current="page">Inbox</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">Overview</div>
+          <h1>Inbox</h1>
+          
+        </div>
+        <div class="fo-page-actions"><button class="fo-btn fo-btn-primary" data-fo-open="#compose"><i data-lucide="pen-line"></i>Compose</button></div>
+      </div>
+      <div class="fo-inbox">
+        <nav class="fo-inbox-folders" aria-label="Folders">
+          <a class="fo-nav-link" href="#" aria-current="page"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+          <a class="fo-nav-link" href="#"><i data-lucide="star"></i><span>Starred</span></a>
+          <a class="fo-nav-link" href="#"><i data-lucide="send"></i><span>Sent</span></a>
+          <a class="fo-nav-link" href="#"><i data-lucide="file-pen"></i><span>Drafts</span><span class="fo-badge fo-badge-muted">2</span></a>
+          <a class="fo-nav-link" href="#"><i data-lucide="archive"></i><span>Archive</span></a>
+          <a class="fo-nav-link" href="#"><i data-lucide="trash-2"></i><span>Trash</span></a>
+          <div class="fo-nav-label">Labels</div>
+          <a class="fo-nav-link" href="#"><span class="fo-status fo-status-warning"></span><span>Clients</span></a>
+          <a class="fo-nav-link" href="#"><span class="fo-status fo-status-info"></span><span>Finance</span></a>
+        </nav>
+        <div class="fo-inbox-list" data-fo-select-list>
+          <div class="fo-table-toolbar"><label class="fo-input-icon" style="flex:1"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search mail"></label></div>
+          <button class="fo-msg is-unread" data-target="#msg-0" aria-selected="true"><span class="fo-msg-from">Mara Okafor</span><span class="fo-msg-time">09:42</span><span class="fo-msg-subject">Re: Renewal and SSO timing</span><span class="fo-msg-snippet">Thanks for the call — we are aligned on Q1. Could you send the SSO setup guide ahead of…</span></button>
+          <button class="fo-msg is-unread" data-target="#msg-1" aria-selected="false"><span class="fo-msg-from">Jonas Weir</span><span class="fo-msg-time">08:15</span><span class="fo-msg-subject">Q4 pricing review</span><span class="fo-msg-snippet">I have left comments on the Studio tier. Short version: hold until after November…</span></button>
+          <button class="fo-msg" data-target="#msg-2" aria-selected="false"><span class="fo-msg-from">Linden Press</span><span class="fo-msg-time">Yesterday</span><span class="fo-msg-subject">Invoice #1043 — remittance</span><span class="fo-msg-snippet">Payment has been sent from our account. Please find the remittance advice attached…</span></button>
+          <button class="fo-msg is-unread" data-target="#msg-3" aria-selected="false"><span class="fo-msg-from">Priya Iyer</span><span class="fo-msg-time">Yesterday</span><span class="fo-msg-subject">Shoot schedule, week 42</span><span class="fo-msg-snippet">Studio is booked both days. Call time 07:30. Catering for twelve, confirmed…</span></button>
+          <button class="fo-msg is-unread" data-target="#msg-4" aria-selected="false"><span class="fo-msg-from">Corvid Labs</span><span class="fo-msg-time">Tue</span><span class="fo-msg-subject">Welcome aboard</span><span class="fo-msg-snippet">We are glad to be here. Three quick questions about seat invitations…</span></button>
+          <button class="fo-msg" data-target="#msg-5" aria-selected="false"><span class="fo-msg-from">Tess Byrne</span><span class="fo-msg-time">Mon</span><span class="fo-msg-subject">September close</span><span class="fo-msg-snippet">Books are closed for September. Variance against forecast was within one percent…</span></button>
+          <button class="fo-msg" data-target="#msg-6" aria-selected="false"><span class="fo-msg-from">Atelier System</span><span class="fo-msg-time">Mon</span><span class="fo-msg-subject">Nightly export complete</span><span class="fo-msg-snippet">14,820 rows were exported to the archive bucket without errors…</span></button>
+        </div>
+        <article class="fo-reader" id="msg-0">
+          <div class="fo-between" style="margin-bottom:var(--space-4)"><div class="fo-row"><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Delete" aria-label="Delete"><i data-lucide="trash-2"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Mark unread" aria-label="Mark unread"><i data-lucide="mail"></i></button></div><span class="fo-small fo-faint">09:42</span></div>
+          <h2>Re: Renewal and SSO timing</h2>
+          <div class="fo-user" style="margin-bottom:var(--space-6)"><span class="fo-avatar">M</span><div><div class="fo-user-name">Mara Okafor</div><div class="fo-user-meta">to Eleanor Vance</div></div></div>
+          <div class="fo-reader-body"><p>Hello Eleanor,</p><p>Thanks for the call — we are aligned on Q1. Could you send the SSO setup guide ahead of. I have put the detail below so it is all in one place, and I am happy to pick this up on a call if that is quicker for you.</p><p>Nothing here is urgent before Friday, but it would help to have a decision by the end of next week so the team can plan around it.</p><p>With thanks,<br>Mara</p></div>
+          <hr>
+          <div class="fo-row"><button class="fo-btn" data-fo-open="#compose"><i data-lucide="reply"></i>Reply</button><button class="fo-btn fo-btn-ghost"><i data-lucide="forward"></i>Forward</button></div>
+        </article>
+        <article class="fo-reader" id="msg-1" hidden>
+          <div class="fo-between" style="margin-bottom:var(--space-4)"><div class="fo-row"><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Delete" aria-label="Delete"><i data-lucide="trash-2"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Mark unread" aria-label="Mark unread"><i data-lucide="mail"></i></button></div><span class="fo-small fo-faint">08:15</span></div>
+          <h2>Q4 pricing review</h2>
+          <div class="fo-user" style="margin-bottom:var(--space-6)"><span class="fo-avatar">J</span><div><div class="fo-user-name">Jonas Weir</div><div class="fo-user-meta">to Eleanor Vance</div></div></div>
+          <div class="fo-reader-body"><p>Hello Eleanor,</p><p>I have left comments on the Studio tier. Short version: hold until after November. I have put the detail below so it is all in one place, and I am happy to pick this up on a call if that is quicker for you.</p><p>Nothing here is urgent before Friday, but it would help to have a decision by the end of next week so the team can plan around it.</p><p>With thanks,<br>Jonas</p></div>
+          <hr>
+          <div class="fo-row"><button class="fo-btn" data-fo-open="#compose"><i data-lucide="reply"></i>Reply</button><button class="fo-btn fo-btn-ghost"><i data-lucide="forward"></i>Forward</button></div>
+        </article>
+        <article class="fo-reader" id="msg-2" hidden>
+          <div class="fo-between" style="margin-bottom:var(--space-4)"><div class="fo-row"><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Delete" aria-label="Delete"><i data-lucide="trash-2"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Mark unread" aria-label="Mark unread"><i data-lucide="mail"></i></button></div><span class="fo-small fo-faint">Yesterday</span></div>
+          <h2>Invoice #1043 — remittance</h2>
+          <div class="fo-user" style="margin-bottom:var(--space-6)"><span class="fo-avatar">L</span><div><div class="fo-user-name">Linden Press</div><div class="fo-user-meta">to Eleanor Vance</div></div></div>
+          <div class="fo-reader-body"><p>Hello Eleanor,</p><p>Payment has been sent from our account. Please find the remittance advice attached. I have put the detail below so it is all in one place, and I am happy to pick this up on a call if that is quicker for you.</p><p>Nothing here is urgent before Friday, but it would help to have a decision by the end of next week so the team can plan around it.</p><p>With thanks,<br>Linden</p></div>
+          <hr>
+          <div class="fo-row"><button class="fo-btn" data-fo-open="#compose"><i data-lucide="reply"></i>Reply</button><button class="fo-btn fo-btn-ghost"><i data-lucide="forward"></i>Forward</button></div>
+        </article>
+        <article class="fo-reader" id="msg-3" hidden>
+          <div class="fo-between" style="margin-bottom:var(--space-4)"><div class="fo-row"><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Delete" aria-label="Delete"><i data-lucide="trash-2"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Mark unread" aria-label="Mark unread"><i data-lucide="mail"></i></button></div><span class="fo-small fo-faint">Yesterday</span></div>
+          <h2>Shoot schedule, week 42</h2>
+          <div class="fo-user" style="margin-bottom:var(--space-6)"><span class="fo-avatar">P</span><div><div class="fo-user-name">Priya Iyer</div><div class="fo-user-meta">to Eleanor Vance</div></div></div>
+          <div class="fo-reader-body"><p>Hello Eleanor,</p><p>Studio is booked both days. Call time 07:30. Catering for twelve, confirmed. I have put the detail below so it is all in one place, and I am happy to pick this up on a call if that is quicker for you.</p><p>Nothing here is urgent before Friday, but it would help to have a decision by the end of next week so the team can plan around it.</p><p>With thanks,<br>Priya</p></div>
+          <hr>
+          <div class="fo-row"><button class="fo-btn" data-fo-open="#compose"><i data-lucide="reply"></i>Reply</button><button class="fo-btn fo-btn-ghost"><i data-lucide="forward"></i>Forward</button></div>
+        </article>
+        <article class="fo-reader" id="msg-4" hidden>
+          <div class="fo-between" style="margin-bottom:var(--space-4)"><div class="fo-row"><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Delete" aria-label="Delete"><i data-lucide="trash-2"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Mark unread" aria-label="Mark unread"><i data-lucide="mail"></i></button></div><span class="fo-small fo-faint">Tue</span></div>
+          <h2>Welcome aboard</h2>
+          <div class="fo-user" style="margin-bottom:var(--space-6)"><span class="fo-avatar">C</span><div><div class="fo-user-name">Corvid Labs</div><div class="fo-user-meta">to Eleanor Vance</div></div></div>
+          <div class="fo-reader-body"><p>Hello Eleanor,</p><p>We are glad to be here. Three quick questions about seat invitations. I have put the detail below so it is all in one place, and I am happy to pick this up on a call if that is quicker for you.</p><p>Nothing here is urgent before Friday, but it would help to have a decision by the end of next week so the team can plan around it.</p><p>With thanks,<br>Corvid</p></div>
+          <hr>
+          <div class="fo-row"><button class="fo-btn" data-fo-open="#compose"><i data-lucide="reply"></i>Reply</button><button class="fo-btn fo-btn-ghost"><i data-lucide="forward"></i>Forward</button></div>
+        </article>
+        <article class="fo-reader" id="msg-5" hidden>
+          <div class="fo-between" style="margin-bottom:var(--space-4)"><div class="fo-row"><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Delete" aria-label="Delete"><i data-lucide="trash-2"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Mark unread" aria-label="Mark unread"><i data-lucide="mail"></i></button></div><span class="fo-small fo-faint">Mon</span></div>
+          <h2>September close</h2>
+          <div class="fo-user" style="margin-bottom:var(--space-6)"><span class="fo-avatar">T</span><div><div class="fo-user-name">Tess Byrne</div><div class="fo-user-meta">to Eleanor Vance</div></div></div>
+          <div class="fo-reader-body"><p>Hello Eleanor,</p><p>Books are closed for September. Variance against forecast was within one percent. I have put the detail below so it is all in one place, and I am happy to pick this up on a call if that is quicker for you.</p><p>Nothing here is urgent before Friday, but it would help to have a decision by the end of next week so the team can plan around it.</p><p>With thanks,<br>Tess</p></div>
+          <hr>
+          <div class="fo-row"><button class="fo-btn" data-fo-open="#compose"><i data-lucide="reply"></i>Reply</button><button class="fo-btn fo-btn-ghost"><i data-lucide="forward"></i>Forward</button></div>
+        </article>
+        <article class="fo-reader" id="msg-6" hidden>
+          <div class="fo-between" style="margin-bottom:var(--space-4)"><div class="fo-row"><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Archive" aria-label="Archive"><i data-lucide="archive"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Delete" aria-label="Delete"><i data-lucide="trash-2"></i></button><button class="fo-btn fo-btn-icon fo-btn-sm" data-fo-tooltip="Mark unread" aria-label="Mark unread"><i data-lucide="mail"></i></button></div><span class="fo-small fo-faint">Mon</span></div>
+          <h2>Nightly export complete</h2>
+          <div class="fo-user" style="margin-bottom:var(--space-6)"><span class="fo-avatar">A</span><div><div class="fo-user-name">Atelier System</div><div class="fo-user-meta">to Eleanor Vance</div></div></div>
+          <div class="fo-reader-body"><p>Hello Eleanor,</p><p>14,820 rows were exported to the archive bucket without errors. I have put the detail below so it is all in one place, and I am happy to pick this up on a call if that is quicker for you.</p><p>Nothing here is urgent before Friday, but it would help to have a decision by the end of next week so the team can plan around it.</p><p>With thanks,<br>Atelier</p></div>
+          <hr>
+          <div class="fo-row"><button class="fo-btn" data-fo-open="#compose"><i data-lucide="reply"></i>Reply</button><button class="fo-btn fo-btn-ghost"><i data-lucide="forward"></i>Forward</button></div>
+        </article>
+      </div>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+<div class="fo-overlay fo-overlay-drawer" id="compose" aria-hidden="true" role="dialog" aria-labelledby="cm-title">
+  <form class="fo-drawer" data-fo-validate data-success="Message sent." style="width:min(560px,100vw)">
+    <div class="fo-modal-header"><h2 class="fo-modal-title" id="cm-title">New message</h2><button type="button" class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"><i data-lucide="x"></i></button></div>
+    <div class="fo-modal-body fo-form">
+      <div class="fo-field"><label class="fo-label" for="cm-to">To <span class="fo-req">*</span></label><input class="fo-input" id="cm-to" type="email" required><p class="fo-error"></p></div>
+      <div class="fo-field"><label class="fo-label" for="cm-s">Subject</label><input class="fo-input" id="cm-s"></div>
+      <div class="fo-field"><label class="fo-label" for="cm-b">Message <span class="fo-req">*</span></label><textarea class="fo-textarea" id="cm-b" required style="min-height:240px"></textarea><p class="fo-error"></p></div>
+    </div>
+    <div class="fo-modal-footer"><button type="button" class="fo-btn fo-btn-ghost" data-fo-close>Discard</button><button type="submit" class="fo-btn fo-btn-primary"><i data-lucide="send"></i>Send</button></div>
+  </form>
+</div>
+</body>
+</html>

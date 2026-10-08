@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empty & loading · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html" aria-current="page"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li><a href="#">Build</a></li><li aria-current="page">Empty & loading</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">Build</div>
+          <h1>Empty, loading & feedback</h1>
+          <p class="fo-page-sub">What a screen looks like before there is anything on it, while it waits, and when something goes wrong.</p>
+        </div>
+        <div class="fo-page-actions"></div>
+      </div>
+      <div class="fo-stack-lg">
+        <div class="fo-grid">
+          <section class="fo-card fo-col-4"><div class="fo-empty"><span class="fo-empty-mark"><i data-lucide="folder-open"></i></span><h3>No projects yet</h3><p>Projects hold tasks, files and the people working on them.</p><button class="fo-btn fo-btn-primary"><i data-lucide="plus"></i>Create a project</button></div></section>
+          <section class="fo-card fo-col-4"><div class="fo-empty"><span class="fo-empty-mark"><i data-lucide="search-x"></i></span><h3>No results for “ostrava q3”</h3><p>Check the spelling, or search all workspaces instead.</p><div class="fo-row"><button class="fo-btn">Clear search</button><button class="fo-btn fo-btn-ghost">Search everywhere</button></div></div></section>
+          <section class="fo-card fo-col-4"><div class="fo-empty"><span class="fo-empty-mark"><i data-lucide="inbox"></i></span><h3>All caught up</h3><p>New messages and mentions will appear here.</p></div></section>
+        </div>
+        <div class="fo-section-title fo-mt-0"><h3>Loading</h3><span class="fo-small fo-muted">.fo-skeleton · .fo-spinner · .fo-progress</span></div>
+        <div class="fo-grid">
+          <section class="fo-card fo-col-4"><div class="fo-card-body"><span class="fo-skeleton fo-skeleton-title"></span><span class="fo-skeleton fo-skeleton-text"></span><span class="fo-skeleton fo-skeleton-text"></span><span class="fo-skeleton fo-skeleton-text" style="width:70%"></span></div></section>
+          <section class="fo-card fo-col-4"><div class="fo-card-body fo-stack"><div class="fo-row"><span class="fo-skeleton fo-skeleton-circle" style="width:36px;height:36px"></span><div style="flex:1"><span class="fo-skeleton fo-skeleton-text" style="width:50%"></span><span class="fo-skeleton fo-skeleton-text" style="width:30%"></span></div></div><span class="fo-skeleton" style="height:110px"></span></div></section>
+          <section class="fo-card fo-col-4"><div class="fo-card-body fo-stack" style="align-items:center;justify-content:center;min-height:180px"><span class="fo-spinner fo-spinner-lg"></span><span class="fo-small fo-muted">Fetching the latest figures…</span><div class="fo-progress fo-progress-indeterminate" style="width:60%"><span></span></div></div></section>
+        </div>
+        <div class="fo-section-title fo-mt-0"><h3>Alerts</h3><span class="fo-small fo-muted">.fo-alert-info · -success · -warning · -danger</span></div>
+        <div class="fo-stack">
+          <div class="fo-alert fo-alert-info"><i data-lucide="info"></i><div class="fo-alert-body"><p class="fo-alert-title">Scheduled maintenance</p><p>Exports pause on Sunday between 02:00 and 03:00 CET.</p></div><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dismiss aria-label="Dismiss"><i data-lucide="x"></i></button></div>
+          <div class="fo-alert fo-alert-success"><i data-lucide="circle-check"></i><div class="fo-alert-body"><p class="fo-alert-title">Import complete</p><p>1,284 customers imported. 3 duplicates were merged.</p></div><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dismiss aria-label="Dismiss"><i data-lucide="x"></i></button></div>
+          <div class="fo-alert fo-alert-warning"><i data-lucide="triangle-alert"></i><div class="fo-alert-body"><p class="fo-alert-title">Seats almost full</p><p>23 of 24 seats are in use. <a href="settings.html#s-billing">Add seats</a> before inviting more people.</p></div></div>
+          <div class="fo-alert fo-alert-danger"><i data-lucide="circle-alert"></i><div class="fo-alert-body"><p class="fo-alert-title">Payment failed</p><p>The card ending 4021 was declined. Update it to keep the workspace active.</p></div><button class="fo-btn fo-btn-sm fo-btn-danger">Update card</button></div>
+        </div>
+        <div class="fo-section-title fo-mt-0"><h3>Toasts</h3><span class="fo-small fo-muted">Folio.toast({ title, message, type })</span></div>
+        <div class="fo-row">
+          <button class="fo-btn" data-fo-toast="Your draft was saved.">Neutral</button>
+          <button class="fo-btn" data-fo-toast="Invoice #1047 marked paid." data-fo-toast-title="Done" data-fo-toast-type="success">Success</button>
+          <button class="fo-btn" data-fo-toast="Exports run nightly at 03:00." data-fo-toast-type="info">Info</button>
+          <button class="fo-btn" data-fo-toast="Couldn't reach the server. Retrying." data-fo-toast-title="Connection lost" data-fo-toast-type="danger">Danger</button>
+        </div>
+        <div class="fo-section-title fo-mt-0"><h3>Error pages</h3></div>
+        <div class="fo-row"><a class="fo-btn" href="404.html">404 — Not found</a><a class="fo-btn" href="500.html">500 — Server error</a></div>
+      </div>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+
+</body>
+</html>

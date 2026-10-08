@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice #1047 · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html" aria-current="page"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li><a href="tables.html">Invoices</a></li><li aria-current="page">#1047</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">Invoices</div>
+          <h1>Invoice #1047</h1>
+          
+        </div>
+        <div class="fo-page-actions"><span class="fo-status fo-status-success" style="margin-right:8px">Paid 7 Oct</span><button class="fo-btn" data-fo-print><i data-lucide="printer"></i>Print</button><button class="fo-btn" data-fo-toast="PDF download started"><i data-lucide="download"></i>PDF</button><button class="fo-btn fo-btn-primary" data-fo-toast="Invoice sent to Halden Studio" data-fo-toast-type="success"><i data-lucide="send"></i>Send</button></div>
+      </div>
+      <article class="fo-doc">
+        <div class="fo-doc-head">
+          <div><div class="fo-brand" style="padding:0;height:auto;border:0;margin-bottom:var(--space-6)"><span class="fo-brand-mark">A</span><span class="fo-brand-name">Atelier</span></div><h1 class="fo-doc-title">Invoice</h1><div class="fo-eyebrow" style="margin-top:8px">No. 1047</div></div>
+          <dl class="fo-dl" style="min-width:260px;align-self:end"><dt>Issued</dt><dd class="fo-num">1 October 2026</dd><dt>Due</dt><dd class="fo-num">31 October 2026</dd><dt>Reference</dt><dd>PO-HS-2291</dd></dl>
+        </div>
+        <div class="fo-grid" style="padding:var(--space-6) 0">
+          <div class="fo-col-6"><div class="fo-eyebrow">From</div><p class="fo-small" style="margin-top:6px">Atelier ApS<br>Bredgade 41<br>1260 Copenhagen K, Denmark<br>VAT DK 3812 9940</p></div>
+          <div class="fo-col-6"><div class="fo-eyebrow">Billed to</div><p class="fo-small" style="margin-top:6px">Halden Studio<br>Attn. Mara Okafor<br>Vesterbrogade 112<br>1620 Copenhagen V, Denmark</p></div>
+        </div>
+        <table class="fo-table">
+          <thead><tr><th style="padding-left:0">Description</th><th class="fo-right">Qty</th><th class="fo-right">Rate</th><th class="fo-right" style="padding-right:0">Amount</th></tr></thead>
+          <tbody>
+            <tr><td style="padding-left:0">Editorial design — Winter catalogue<div class="fo-faint fo-xs">64 pages</div></td><td class="fo-right">1</td><td class="fo-right">$6,400.00</td><td class="fo-right" style="padding-right:0">$6,400.00</td></tr>
+            <tr><td style="padding-left:0">Product photography<div class="fo-faint fo-xs">2 studio days</div></td><td class="fo-right">2</td><td class="fo-right">$1,800.00</td><td class="fo-right" style="padding-right:0">$3,600.00</td></tr>
+            <tr><td style="padding-left:0">Retouching<div class="fo-faint fo-xs">120 images</div></td><td class="fo-right">120</td><td class="fo-right">$18.00</td><td class="fo-right" style="padding-right:0">$2,160.00</td></tr>
+            <tr><td style="padding-left:0">Print management<div class="fo-faint fo-xs">Fixed fee</div></td><td class="fo-right">1</td><td class="fo-right">$950.00</td><td class="fo-right" style="padding-right:0">$950.00</td></tr>
+          </tbody>
+        </table>
+        <div class="fo-doc-total"><dl><dt>Subtotal</dt><dd>$13,310.00</dd><dt>VAT 25%</dt><dd>$3,327.50</dd><dt>Paid</dt><dd>−$16,637.50</dd><dt class="fo-grand">Balance</dt><dd class="fo-grand">$0.00</dd></dl></div>
+        <hr style="margin-top:var(--space-8)">
+        <p class="fo-small fo-muted fo-justify" style="max-width:60ch">Payment by bank transfer to Danske Bank, IBAN DK50 0040 0440 1162 43, within 30 days. Thank you for the work this season.</p>
+      </article>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+
+</body>
+</html>

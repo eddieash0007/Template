@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendar · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html" aria-current="page"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li aria-current="page">Calendar</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">Overview</div>
+          <h1>Calendar</h1>
+          <p class="fo-page-sub">Events come from a JSON attribute; month navigation is handled by <code>data-fo-calendar</code>.</p>
+        </div>
+        <div class="fo-page-actions"><button class="fo-btn fo-btn-primary" data-fo-open="#new-event"><i data-lucide="plus"></i>New event</button></div>
+      </div>
+      <div class="fo-cal" data-fo-calendar data-start="2026-10-01" data-events='[{"date":"2026-10-01","title":"Month-end close","kind":"b"},{"date":"2026-10-05","title":"Design review","kind":"a","time":"10:00"},{"date":"2026-10-07","title":"Halden QBR","kind":"c","time":"14:00"},{"date":"2026-10-08","title":"Standup","kind":"a","time":"09:30"},{"date":"2026-10-08","title":"Cover sign-off","kind":"a","time":"15:00"},{"date":"2026-10-09","title":"Price list due","kind":"b"},{"date":"2026-10-12","title":"Shoot day 1","kind":"a"},{"date":"2026-10-13","title":"Shoot day 2","kind":"a"},{"date":"2026-10-15","title":"Board prep","kind":"c","time":"11:00"},{"date":"2026-10-19","title":"All hands","kind":"b","time":"16:00"},{"date":"2026-10-22","title":"Linden Press call","kind":"c","time":"13:30"},{"date":"2026-10-26","title":"Print handoff","kind":"a"},{"date":"2026-10-30","title":"Payroll","kind":"b"},{"date":"2026-11-02","title":"Q4 kickoff","kind":"c","time":"10:00"}]'>
+        <div class="fo-cal-head">
+          <h2 data-cal-title></h2>
+          <div class="fo-btn-group"><button class="fo-btn fo-btn-sm fo-btn-icon" data-cal="prev" aria-label="Previous month"><i data-lucide="chevron-left"></i></button><button class="fo-btn fo-btn-sm" data-cal="today">Today</button><button class="fo-btn fo-btn-sm fo-btn-icon" data-cal="next" aria-label="Next month"><i data-lucide="chevron-right"></i></button></div>
+          <span class="fo-spacer"></span>
+          <div class="fo-legend"><span><i></i>Project</span><span><i class="fo-l1"></i>Company</span><span><i style="background:var(--color-info)"></i>Client</span></div>
+          <div class="fo-tabs fo-tabs-pill" data-fo-tabs role="tablist"><button class="fo-tab" role="tab" aria-selected="true">Month</button><button class="fo-tab" role="tab">Week</button><button class="fo-tab" role="tab">Agenda</button></div>
+        </div>
+        <div class="fo-cal-grid" data-cal-grid></div>
+      </div>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+<div class="fo-overlay" id="new-event" aria-hidden="true" role="dialog" aria-labelledby="ne-title">
+  <form class="fo-modal" data-fo-validate data-success="Event added to your calendar.">
+    <div class="fo-modal-header"><h2 class="fo-modal-title" id="ne-title">New event</h2><button type="button" class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"><i data-lucide="x"></i></button></div>
+    <div class="fo-modal-body fo-form">
+      <div class="fo-field"><label class="fo-label" for="ne-t">Title <span class="fo-req">*</span></label><input class="fo-input" id="ne-t" required><p class="fo-error"></p></div>
+      <div class="fo-form-row"><div class="fo-field"><label class="fo-label" for="ne-d">Date <span class="fo-req">*</span></label><input class="fo-input" type="date" id="ne-d" required><p class="fo-error"></p></div><div class="fo-field"><label class="fo-label" for="ne-time">Time</label><input class="fo-input" type="time" id="ne-time"></div></div>
+      <div class="fo-field"><span class="fo-label">Type</span><div class="fo-seg"><label><input type="radio" name="ne-k" checked>Project</label><label><input type="radio" name="ne-k">Company</label><label><input type="radio" name="ne-k">Client</label></div></div>
+    </div>
+    <div class="fo-modal-footer"><button type="button" class="fo-btn fo-btn-ghost" data-fo-close>Cancel</button><button type="submit" class="fo-btn fo-btn-primary">Add event</button></div>
+  </form>
+</div>
+</body>
+</html>

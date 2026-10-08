@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html" aria-current="page"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li><a href="tables.html">Customers</a></li><li aria-current="page">Mara Okafor</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-cover"></div>
+      <div class="fo-profile-head">
+        <span class="fo-avatar fo-avatar-xl">M</span>
+        <div style="flex:1;min-width:220px;padding-top:52px">
+          <h1>Mara Okafor</h1>
+          <div class="fo-row fo-small fo-muted"><span>Head of Operations, Halden Studio</span><span>·</span><span>Copenhagen</span><span class="fo-tag fo-tag-accent">Enterprise</span><span class="fo-status fo-status-success">Active</span></div>
+        </div>
+        <div class="fo-row"><a class="fo-btn" href="inbox.html"><i data-lucide="mail"></i>Message</a><button class="fo-btn fo-btn-primary" data-fo-toast="Mara is now followed" data-fo-toast-type="success"><i data-lucide="user-plus"></i>Follow</button><div class="fo-dropdown"><button class="fo-btn fo-btn-icon" data-fo-dropdown aria-label="More"><i data-lucide="ellipsis"></i></button><div class="fo-menu"><button class="fo-menu-item"><i data-lucide="pencil"></i>Edit</button><button class="fo-menu-item" data-fo-copy="mara@haldenstudio.com"><i data-lucide="copy"></i>Copy email</button><div class="fo-menu-divider"></div><button class="fo-menu-item fo-menu-item-danger"><i data-lucide="ban"></i>Suspend</button></div></div></div>
+      </div>
+      <div class="fo-tabs" data-fo-tabs role="tablist" style="margin-top:var(--space-6)">
+        <button class="fo-tab" role="tab" aria-selected="true" aria-controls="p-over">Overview</button>
+        <button class="fo-tab" role="tab" aria-controls="p-proj">Projects <span class="fo-badge fo-badge-muted">4</span></button>
+        <button class="fo-tab" role="tab" aria-controls="p-files">Files</button>
+      </div>
+      <div class="fo-tab-panel" id="p-over" role="tabpanel">
+        <div class="fo-grid">
+          <div class="fo-col-4 fo-stack">
+            <section class="fo-card"><div class="fo-card-header"><h2 class="fo-card-title">About</h2></div><div class="fo-card-body">
+              <p class="fo-justify fo-small">Runs operations for a forty-person design studio. Signed the Enterprise plan in March after a six-week pilot; champions the shared calendar internally.</p>
+              <dl class="fo-dl"><dt>Email</dt><dd><a href="mailto:mara@haldenstudio.com">mara@haldenstudio.com</a></dd><dt>Phone</dt><dd class="fo-num">+45 31 22 80 14</dd><dt>Customer since</dt><dd>March 2026</dd><dt>Account owner</dt><dd><span class="fo-user"><span class="fo-avatar fo-avatar-sm">E</span>Eleanor Vance</span></dd></dl>
+            </div></section>
+            <section class="fo-card"><div class="fo-card-header"><h2 class="fo-card-title">Team</h2><div class="fo-avatars"><span class="fo-avatar fo-avatar-sm">J</span><span class="fo-avatar fo-avatar-sm">P</span><span class="fo-avatar fo-avatar-sm">T</span><span class="fo-avatar fo-avatar-sm fo-avatar-n">+9</span></div></div>
+              <ul class="fo-list fo-small"><li><span class="fo-avatar fo-avatar-sm fo-presence">J</span><span style="flex:1">Jonas Weir<div class="fo-faint fo-xs">Studio lead</div></span><span class="fo-tag fo-tag-outline">Admin</span></li><li><span class="fo-avatar fo-avatar-sm">P</span><span style="flex:1">Priya Iyer<div class="fo-faint fo-xs">Producer</div></span><span class="fo-tag fo-tag-outline">Member</span></li><li><span class="fo-avatar fo-avatar-sm fo-presence">T</span><span style="flex:1">Tess Byrne<div class="fo-faint fo-xs">Finance</div></span><span class="fo-tag fo-tag-outline">Billing</span></li></ul>
+            </section>
+          </div>
+          <div class="fo-col-8 fo-stack">
+            <section class="fo-stats"><div class="fo-stat"><div class="fo-stat-label">Lifetime value</div><div class="fo-stat-value">$48.6<small>k</small></div></div><div class="fo-stat"><div class="fo-stat-label">Seats</div><div class="fo-stat-value">42</div></div><div class="fo-stat"><div class="fo-stat-label">Health</div><div class="fo-row"><span class="fo-ring" style="--p:86">86</span><span class="fo-small fo-muted">Strong</span></div></div></section>
+            <section class="fo-card"><div class="fo-card-header"><h2 class="fo-card-title">Usage, last 12 weeks</h2></div><div class="fo-card-body"><div class="fo-chart" style="height:200px" data-type="line" data-suffix=" sessions" data-labels='["W29","W30","W31","W32","W33","W34","W35","W36","W37","W38","W39","W40"]' data-series='[[310,342,328,360,401,388,420,436,412,458,470,492]]'></div></div></section>
+            <section class="fo-card"><div class="fo-card-header"><h2 class="fo-card-title">History</h2></div><div class="fo-card-body">
+              <ol class="fo-timeline">
+                <li><span class="fo-timeline-dot is-accent"><i data-lucide="receipt-text"></i></span><div class="fo-timeline-body">Paid invoice <a href="invoice.html">#1047</a> — $4,200.00<div class="fo-timeline-time">7 Oct 2026</div></div></li>
+                <li><span class="fo-timeline-dot"><i data-lucide="users"></i></span><div class="fo-timeline-body">Added 6 seats to the workspace<div class="fo-timeline-time">22 Sep 2026</div></div></li>
+                <li><span class="fo-timeline-dot"><i data-lucide="phone"></i></span><div class="fo-timeline-body">Quarterly review with Eleanor<p class="fo-timeline-quote">Wants SSO before renewal; budget approved for Q1.</p><div class="fo-timeline-time">3 Sep 2026</div></div></li>
+                <li><span class="fo-timeline-dot"><i data-lucide="sparkles"></i></span><div class="fo-timeline-body">Upgraded from Team to Enterprise<div class="fo-timeline-time">14 Mar 2026</div></div></li>
+              </ol>
+            </div></section>
+          </div>
+        </div>
+      </div>
+      <div class="fo-tab-panel" id="p-proj" role="tabpanel" hidden>
+        <div class="fo-auto-grid">
+          <a class="fo-card" href="kanban.html"><div class="fo-card-body fo-stack"><div class="fo-card-kicker">Editorial</div><h3 class="fo-card-title">Winter catalogue</h3><p class="fo-small fo-muted fo-mb-0">48 tasks · due 30 Nov</p><div class="fo-progress"><span style="width:64%"></span></div></div></a>
+          <a class="fo-card" href="kanban.html"><div class="fo-card-body fo-stack"><div class="fo-card-kicker">Product</div><h3 class="fo-card-title">Client portal refresh</h3><p class="fo-small fo-muted fo-mb-0">31 tasks · due 12 Dec</p><div class="fo-progress"><span style="width:38%"></span></div></div></a>
+          <a class="fo-card" href="kanban.html"><div class="fo-card-body fo-stack"><div class="fo-card-kicker">Research</div><h3 class="fo-card-title">Studio survey 2026</h3><p class="fo-small fo-muted fo-mb-0">12 tasks · complete</p><div class="fo-progress"><span style="width:100%"></span></div></div></a>
+          <a class="fo-card" href="kanban.html"><div class="fo-card-body fo-stack"><div class="fo-card-kicker">Operations</div><h3 class="fo-card-title">Office move</h3><p class="fo-small fo-muted fo-mb-0">20 tasks · due 9 Jan</p><div class="fo-progress"><span style="width:12%"></span></div></div></a>
+        </div>
+      </div>
+      <div class="fo-tab-panel" id="p-files" role="tabpanel" hidden>
+        <section class="fo-card"><ul class="fo-list fo-small">
+          <li><i data-lucide="file-text"></i><span style="flex:1">Enterprise agreement — signed.pdf</span><span class="fo-faint fo-num">412 KB</span><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" aria-label="Download"><i data-lucide="download"></i></button></li>
+          <li><i data-lucide="file-spreadsheet"></i><span style="flex:1">Seat allocation Q4.csv</span><span class="fo-faint fo-num">18 KB</span><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" aria-label="Download"><i data-lucide="download"></i></button></li>
+          <li><i data-lucide="file-image"></i><span style="flex:1">Brand guidelines.png</span><span class="fo-faint fo-num">2.4 MB</span><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" aria-label="Download"><i data-lucide="download"></i></button></li>
+        </ul></section>
+      </div>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+
+</body>
+</html>

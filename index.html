@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-layout="side">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Folio</title>
+<script>(function(){try{var d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('folio:theme')||'light';d.dataset.layout=s.getItem('folio:layout')||'side';if(s.getItem('folio:collapsed')==='1')d.classList.add('fo-collapsed')}catch(e){}})()</script>
+<link rel="stylesheet" href="css/folio.css">
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script defer src="js/folio.js"></script>
+</head>
+<body>
+<div class="fo-app">
+  <aside class="fo-sidebar" aria-label="Primary">
+    <a class="fo-brand" href="index.html"><span class="fo-brand-mark">F</span><span class="fo-brand-name">Folio</span></a>
+    <nav class="fo-nav">
+      <div class="fo-nav-label">Overview</div>
+      <a class="fo-nav-link" href="index.html" aria-current="page"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a class="fo-nav-link" href="inbox.html"><i data-lucide="inbox"></i><span>Inbox</span><span class="fo-badge">4</span></a>
+      <a class="fo-nav-link" href="calendar.html"><i data-lucide="calendar"></i><span>Calendar</span></a>
+      <a class="fo-nav-link" href="kanban.html"><i data-lucide="square-kanban"></i><span>Tasks</span></a>
+      <div class="fo-nav-label">Records</div>
+      <a class="fo-nav-link" href="tables.html"><i data-lucide="users"></i><span>Customers</span></a>
+      <a class="fo-nav-link" href="invoice.html"><i data-lucide="receipt-text"></i><span>Invoices</span></a>
+      <a class="fo-nav-link" href="profile.html"><i data-lucide="contact"></i><span>Profile</span></a>
+      <div class="fo-nav-label">Build</div>
+      <a class="fo-nav-link" href="forms.html"><i data-lucide="text-cursor-input"></i><span>Forms</span></a>
+      <a class="fo-nav-link" href="components.html"><i data-lucide="shapes"></i><span>Components</span></a>
+      <a class="fo-nav-link" href="states.html"><i data-lucide="circle-dashed"></i><span>Empty & loading</span></a>
+      <a class="fo-nav-link" href="starter.html"><i data-lucide="file"></i><span>Blank starter</span></a>
+      <div class="fo-nav-label">System</div>
+      <a class="fo-nav-link" href="settings.html"><i data-lucide="settings"></i><span>Settings</span></a>
+      <a class="fo-nav-link" href="login.html"><i data-lucide="log-in"></i><span>Sign in</span></a>
+      <a class="fo-nav-link" href="404.html"><i data-lucide="circle-off"></i><span>Error pages</span></a>
+    </nav>
+    <div class="fo-nav-foot">
+      <div class="fo-progress-label fo-xs"><span class="fo-muted">Storage</span><span>6.2 of 10 GB</span></div>
+      <div class="fo-progress"><span style="width:62%"></span></div>
+    </div>
+  </aside>
+  <div class="fo-scrim"></div>
+  <div class="fo-main">
+    <header class="fo-topbar">
+      <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="sidebar" aria-label="Toggle navigation"><i data-lucide="panel-left"></i></button>
+      <ol class="fo-breadcrumb"><li><a href="index.html">Atelier</a></li><li aria-current="page">Dashboard</li></ol>
+      <label class="fo-topbar-search" style="margin-left:auto"><i data-lucide="search"></i><input class="fo-input fo-input-sm" type="search" placeholder="Search…" data-fo-search aria-label="Search"><kbd>⌘K</kbd></label>
+      <div class="fo-topbar-actions" style="margin-left:0">
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="layout" data-fo-tooltip="Switch layout" data-fo-tooltip-pos="bottom" aria-label="Switch layout"><i data-lucide="panels-top-left"></i></button>
+        <button class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-toggle="theme" data-fo-tooltip="Light / dark" data-fo-tooltip-pos="bottom" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-icon fo-btn-ghost fo-has-dot" data-fo-dropdown aria-expanded="false" aria-label="Notifications"><i data-lucide="bell"></i></button>
+          <div class="fo-popover" style="width:340px;padding:0">
+            <div class="fo-between" style="padding:12px 16px;border-bottom:1px solid var(--color-divider)"><span class="fo-popover-title" style="margin:0">Notifications</span><button class="fo-btn fo-btn-link fo-btn-sm">Mark all read</button></div>
+            <ul class="fo-list">
+              <li><span class="fo-avatar fo-avatar-sm">M</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Mara Okafor</b> approved invoice <span class="fo-num">#1042</span><div class="fo-faint fo-xs">12 min ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm">J</span><div class="fo-small" style="flex:1"><b style="font-weight:500">Jonas Weir</b> commented on <i>Q4 plan</i><div class="fo-faint fo-xs">1 hr ago</div></div></li>
+              <li><span class="fo-avatar fo-avatar-sm fo-avatar-n"><i data-lucide="server" style="width:12px;height:12px"></i></span><div class="fo-small" style="flex:1">Nightly export completed<div class="fo-faint fo-xs">6 hr ago</div></div></li>
+            </ul>
+            <div style="padding:10px 16px;border-top:1px solid var(--color-divider)"><a href="inbox.html" class="fo-small">View all activity</a></div>
+          </div>
+        </div>
+        <div class="fo-dropdown">
+          <button class="fo-btn fo-btn-ghost" data-fo-dropdown aria-expanded="false" style="padding:0 6px 0 4px;gap:8px"><span class="fo-avatar fo-avatar-sm">E</span><span class="fo-small" style="font-family:var(--font-body);font-weight:400">Eleanor</span><i data-lucide="chevron-down" style="width:14px;height:14px"></i></button>
+          <div class="fo-menu">
+            <div class="fo-menu-head"><div class="fo-user-name">Eleanor Vance</div><div class="fo-user-meta">eleanor@atelier.co</div></div>
+            <a class="fo-menu-item" href="profile.html"><i data-lucide="user"></i>Profile</a>
+            <a class="fo-menu-item" href="settings.html"><i data-lucide="settings"></i>Settings<kbd>⌘,</kbd></a>
+            <a class="fo-menu-item" href="invoice.html"><i data-lucide="credit-card"></i>Billing</a>
+            <div class="fo-menu-divider"></div>
+            <a class="fo-menu-item" href="login.html"><i data-lucide="log-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fo-content">
+
+      <div class="fo-page-header">
+        <div>
+          <div class="fo-page-kicker">Thursday · 8 October 2026</div>
+          <h1>Good morning, Eleanor</h1>
+          <p class="fo-page-sub">Revenue is ahead of plan for the third week running. Four invoices need a decision before Friday.</p>
+        </div>
+        <div class="fo-page-actions"><div class="fo-dropdown"><button class="fo-btn" data-fo-dropdown><i data-lucide="calendar-range"></i>Last 30 days<i data-lucide="chevron-down"></i></button><div class="fo-menu"><button class="fo-menu-item">Last 7 days</button><button class="fo-menu-item">Last 30 days</button><button class="fo-menu-item">This quarter</button><button class="fo-menu-item">Year to date</button></div></div>
+          <button class="fo-btn fo-btn-primary" data-fo-open="#new-report"><i data-lucide="plus"></i>New report</button></div>
+      </div>
+      <div class="fo-stack-lg">
+        <section class="fo-stats" aria-label="Key figures">
+          <div class="fo-stat"><div class="fo-stat-label">Revenue</div><div class="fo-stat-value">$84.2<small>k</small></div><div class="fo-stat-foot"><span class="fo-delta fo-delta-up"><i data-lucide="arrow-up-right"></i>6.2%</span>vs. September</div><div class="fo-chart fo-spark" data-type="spark" data-series="[42,48,45,52,50,58,61,57,66,70,68,76]"></div></div>
+          <div class="fo-stat"><div class="fo-stat-label">Active accounts</div><div class="fo-stat-value">1,284</div><div class="fo-stat-foot"><span class="fo-delta fo-delta-up"><i data-lucide="arrow-up-right"></i>38</span>new this month</div><div class="fo-chart fo-spark" data-type="spark" data-series="[1180,1192,1200,1214,1220,1231,1238,1246,1259,1266,1275,1284]"></div></div>
+          <div class="fo-stat"><div class="fo-stat-label">Churn</div><div class="fo-stat-value">1.8<small>%</small></div><div class="fo-stat-foot"><span class="fo-delta fo-delta-up"><i data-lucide="arrow-down-right"></i>0.3 pt</span>lower is better</div><div class="fo-chart fo-spark" data-type="spark" data-series="[2.6,2.5,2.4,2.4,2.3,2.2,2.2,2.1,2.0,1.9,1.9,1.8]"></div></div>
+          <div class="fo-stat"><div class="fo-stat-label">Open tickets</div><div class="fo-stat-value">37</div><div class="fo-stat-foot"><span class="fo-delta fo-delta-down"><i data-lucide="arrow-up-right"></i>9</span>since Monday</div><div class="fo-chart fo-spark" data-type="spark" data-series="[22,25,24,28,26,30,29,31,28,33,35,37]"></div></div>
+        </section>
+
+        <div class="fo-grid">
+          <section class="fo-card fo-col-8">
+            <div class="fo-card-header">
+              <div><div class="fo-card-kicker">Revenue</div><h2 class="fo-card-title">Monthly recurring, 2026 against 2025</h2></div>
+              <div class="fo-tabs fo-tabs-pill" data-fo-tabs role="tablist"><button class="fo-tab" role="tab" aria-selected="true">12 mo</button><button class="fo-tab" role="tab">Quarter</button><button class="fo-tab" role="tab">Month</button></div>
+            </div>
+            <div class="fo-card-body">
+              <div class="fo-legend" style="margin-bottom:12px"><span><i></i>2026</span><span><i class="fo-l1"></i>2025</span></div>
+              <div class="fo-chart" style="height:260px" data-type="area" data-prefix="$" data-names='["2026","2025"]' data-labels='["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]' data-series='[[52400,54100,58900,57200,61800,64300,66900,69800,72400,79300,81200,84200],[41200,43800,44100,46900,48200,49100,51600,53900,55200,57800,60100,62400]]'></div>
+            </div>
+          </section>
+          <section class="fo-card fo-col-4">
+            <div class="fo-card-header"><div><div class="fo-card-kicker">Accounts</div><h2 class="fo-card-title">Plan mix</h2></div><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" aria-label="More"><i data-lucide="ellipsis"></i></button></div>
+            <div class="fo-card-body fo-stack">
+              <div class="fo-chart" style="height:180px" data-type="donut" data-series="[612,418,186,68]" data-center="1,284" data-center-label="Accounts"></div>
+              <ul class="fo-list fo-list-tight fo-small">
+                <li><span class="fo-legend"><span><i></i></span></span><span style="flex:1">Studio</span><span class="fo-num">612</span><span class="fo-num fo-faint" style="width:40px;text-align:right">48%</span></li>
+                <li><span class="fo-legend"><span><i class="fo-l1" style="background:var(--color-text)"></i></span></span><span style="flex:1">Team</span><span class="fo-num">418</span><span class="fo-num fo-faint" style="width:40px;text-align:right">33%</span></li>
+                <li><span class="fo-legend"><span><i class="fo-l2"></i></span></span><span style="flex:1">Enterprise</span><span class="fo-num">186</span><span class="fo-num fo-faint" style="width:40px;text-align:right">14%</span></li>
+                <li><span class="fo-legend"><span><i class="fo-l3"></i></span></span><span style="flex:1">Trial</span><span class="fo-num">68</span><span class="fo-num fo-faint" style="width:40px;text-align:right">5%</span></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="fo-card fo-col-8">
+            <div class="fo-card-header"><div><div class="fo-card-kicker">Billing</div><h2 class="fo-card-title">Recent invoices</h2></div><a class="fo-btn fo-btn-sm" href="tables.html">View all<i data-lucide="arrow-right"></i></a></div>
+            <div class="fo-card-body fo-card-body-flush fo-table-wrap">
+              <table class="fo-table">
+                <thead><tr><th>Invoice</th><th>Client</th><th>Issued</th><th class="fo-right">Amount</th><th>Status</th><th class="fo-shrink"></th></tr></thead>
+                <tbody>
+                  <tr><td><a href="invoice.html">#1047</a></td><td><div class="fo-cell-user"><span class="fo-avatar fo-avatar-sm">H</span>Halden Studio</div></td><td class="fo-muted">Oct 07</td><td class="fo-right">$4,200.00</td><td><span class="fo-status fo-status-success">Paid</span></td><td><div class="fo-dropdown"><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dropdown aria-label="Actions"><i data-lucide="ellipsis"></i></button><div class="fo-menu"><a class="fo-menu-item" href="invoice.html"><i data-lucide="eye"></i>View</a><button class="fo-menu-item" data-fo-toast="Reminder sent to Halden Studio"><i data-lucide="send"></i>Send reminder</button><div class="fo-menu-divider"></div><button class="fo-menu-item fo-menu-item-danger"><i data-lucide="trash-2"></i>Void</button></div></div></td></tr>
+                  <tr><td><a href="invoice.html">#1046</a></td><td><div class="fo-cell-user"><span class="fo-avatar fo-avatar-sm">M</span>Maren & Pike</div></td><td class="fo-muted">Oct 06</td><td class="fo-right">$12,860.00</td><td><span class="fo-status fo-status-warning">Pending</span></td><td><div class="fo-dropdown"><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dropdown aria-label="Actions"><i data-lucide="ellipsis"></i></button><div class="fo-menu"><a class="fo-menu-item" href="invoice.html"><i data-lucide="eye"></i>View</a><button class="fo-menu-item" data-fo-toast="Reminder sent to Maren & Pike"><i data-lucide="send"></i>Send reminder</button><div class="fo-menu-divider"></div><button class="fo-menu-item fo-menu-item-danger"><i data-lucide="trash-2"></i>Void</button></div></div></td></tr>
+                  <tr><td><a href="invoice.html">#1045</a></td><td><div class="fo-cell-user"><span class="fo-avatar fo-avatar-sm">C</span>Corvid Labs</div></td><td class="fo-muted">Oct 05</td><td class="fo-right">$980.00</td><td><span class="fo-status fo-status-success">Paid</span></td><td><div class="fo-dropdown"><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dropdown aria-label="Actions"><i data-lucide="ellipsis"></i></button><div class="fo-menu"><a class="fo-menu-item" href="invoice.html"><i data-lucide="eye"></i>View</a><button class="fo-menu-item" data-fo-toast="Reminder sent to Corvid Labs"><i data-lucide="send"></i>Send reminder</button><div class="fo-menu-divider"></div><button class="fo-menu-item fo-menu-item-danger"><i data-lucide="trash-2"></i>Void</button></div></div></td></tr>
+                  <tr><td><a href="invoice.html">#1044</a></td><td><div class="fo-cell-user"><span class="fo-avatar fo-avatar-sm">O</span>Ostrava Group</div></td><td class="fo-muted">Oct 03</td><td class="fo-right">$7,415.50</td><td><span class="fo-status fo-status-danger">Overdue</span></td><td><div class="fo-dropdown"><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dropdown aria-label="Actions"><i data-lucide="ellipsis"></i></button><div class="fo-menu"><a class="fo-menu-item" href="invoice.html"><i data-lucide="eye"></i>View</a><button class="fo-menu-item" data-fo-toast="Reminder sent to Ostrava Group"><i data-lucide="send"></i>Send reminder</button><div class="fo-menu-divider"></div><button class="fo-menu-item fo-menu-item-danger"><i data-lucide="trash-2"></i>Void</button></div></div></td></tr>
+                  <tr><td><a href="invoice.html">#1043</a></td><td><div class="fo-cell-user"><span class="fo-avatar fo-avatar-sm">L</span>Linden Press</div></td><td class="fo-muted">Oct 02</td><td class="fo-right">$2,150.00</td><td><span class="fo-status fo-status-success">Paid</span></td><td><div class="fo-dropdown"><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dropdown aria-label="Actions"><i data-lucide="ellipsis"></i></button><div class="fo-menu"><a class="fo-menu-item" href="invoice.html"><i data-lucide="eye"></i>View</a><button class="fo-menu-item" data-fo-toast="Reminder sent to Linden Press"><i data-lucide="send"></i>Send reminder</button><div class="fo-menu-divider"></div><button class="fo-menu-item fo-menu-item-danger"><i data-lucide="trash-2"></i>Void</button></div></div></td></tr>
+                  <tr><td><a href="invoice.html">#1042</a></td><td><div class="fo-cell-user"><span class="fo-avatar fo-avatar-sm">Q</span>Quill Freight</div></td><td class="fo-muted">Sep 30</td><td class="fo-right">$5,600.00</td><td><span class="fo-status">Draft</span></td><td><div class="fo-dropdown"><button class="fo-btn fo-btn-icon fo-btn-sm fo-btn-ghost" data-fo-dropdown aria-label="Actions"><i data-lucide="ellipsis"></i></button><div class="fo-menu"><a class="fo-menu-item" href="invoice.html"><i data-lucide="eye"></i>View</a><button class="fo-menu-item" data-fo-toast="Reminder sent to Quill Freight"><i data-lucide="send"></i>Send reminder</button><div class="fo-menu-divider"></div><button class="fo-menu-item fo-menu-item-danger"><i data-lucide="trash-2"></i>Void</button></div></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="fo-card fo-col-4">
+            <div class="fo-card-header"><div><div class="fo-card-kicker">Today</div><h2 class="fo-card-title">Activity</h2></div></div>
+            <div class="fo-card-body">
+              <ol class="fo-timeline">
+                <li><span class="fo-timeline-dot is-accent"><i data-lucide="check"></i></span><div class="fo-timeline-body"><b style="font-weight:500">Mara Okafor</b> approved invoice #1047<div class="fo-timeline-time">09:42</div></div></li>
+                <li><span class="fo-timeline-dot"><i data-lucide="message-square"></i></span><div class="fo-timeline-body"><b style="font-weight:500">Jonas Weir</b> commented on <a href="kanban.html">Q4 pricing review</a><p class="fo-timeline-quote">Can we hold the Studio tier until after the November release?</p><div class="fo-timeline-time">08:15</div></div></li>
+                <li><span class="fo-timeline-dot"><i data-lucide="user-plus"></i></span><div class="fo-timeline-body">Corvid Labs joined on the Team plan<div class="fo-timeline-time">07:58</div></div></li>
+                <li><span class="fo-timeline-dot"><i data-lucide="upload"></i></span><div class="fo-timeline-body">Nightly export finished — 14,820 rows<div class="fo-timeline-time">03:00</div></div></li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="fo-card fo-col-6">
+            <div class="fo-card-header"><div><div class="fo-card-kicker">Acquisition</div><h2 class="fo-card-title">Sign-ups by channel</h2></div></div>
+            <div class="fo-card-body"><div class="fo-chart" style="height:220px" data-type="bar" data-names='["This week","Last week"]' data-labels='["Direct","Search","Referral","Partner","Social","Events"]' data-series='[[142,118,96,64,41,22],[128,124,80,58,47,12]]'></div></div>
+          </section>
+          <section class="fo-card fo-col-6">
+            <div class="fo-card-header"><div><div class="fo-card-kicker">Quarter</div><h2 class="fo-card-title">Goals</h2></div><span class="fo-tag fo-tag-accent">Q4</span></div>
+            <div class="fo-card-body">
+              <ul class="fo-bar-list">
+                <li><span>New annual contracts</span><span class="fo-num fo-muted">41 / 60</span><div class="fo-progress fo-progress-lg"><span style="width:68%"></span></div></li>
+                <li><span>Net revenue retention</span><span class="fo-num fo-muted">108% / 110%</span><div class="fo-progress fo-progress-lg"><span style="width:92%"></span></div></li>
+                <li><span>Support first reply under 2h</span><span class="fo-num fo-muted">74% / 90%</span><div class="fo-progress fo-progress-lg"><span style="width:74%"></span></div></li>
+                <li><span>Docs pages rewritten</span><span class="fo-num fo-muted">12 / 40</span><div class="fo-progress fo-progress-lg"><span style="width:30%"></span></div></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="fo-footer"><span>© 2026 Atelier · Built on Folio</span><span><a href="components.html">Components</a> · <a href="settings.html">Settings</a></span></footer>
+  </div>
+</div>
+<div class="fo-overlay" id="new-report" aria-hidden="true" role="dialog" aria-labelledby="nr-title">
+  <form class="fo-modal" data-fo-validate data-success="Report queued. You'll get an email when it's ready." data-success-title="Report created">
+    <div class="fo-modal-header"><div><div class="fo-card-kicker">Reports</div><h2 class="fo-modal-title" id="nr-title">New report</h2></div><button type="button" class="fo-btn fo-btn-icon fo-btn-ghost" data-fo-close aria-label="Close"><i data-lucide="x"></i></button></div>
+    <div class="fo-modal-body fo-form">
+      <div class="fo-field"><label class="fo-label" for="nr-name">Name <span class="fo-req">*</span></label><input class="fo-input" id="nr-name" required placeholder="October revenue summary"><p class="fo-error"></p></div>
+      <div class="fo-form-row">
+        <div class="fo-field"><label class="fo-label" for="nr-src">Source</label><select class="fo-select" id="nr-src"><option>Invoices</option><option>Accounts</option><option>Tickets</option></select></div>
+        <div class="fo-field"><label class="fo-label" for="nr-fmt">Format</label><select class="fo-select" id="nr-fmt"><option>PDF</option><option>CSV</option></select></div>
+      </div>
+      <label class="fo-switch"><input type="checkbox" checked>Email me when it's ready</label>
+    </div>
+    <div class="fo-modal-footer"><button type="button" class="fo-btn fo-btn-ghost" data-fo-close>Cancel</button><button type="submit" class="fo-btn fo-btn-primary">Create report</button></div>
+  </form>
+</div>
+</body>
+</html>
